@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Nesne Metotları</title>
+    <link rel="stylesheet" href="js.css">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <h2>    JavaScript</h2>
+        <li><a href="giris.html">JavaScript Giriş</a></li>
+        <li><a href="syntax.html">Yazılım(Syntax) Yapısı</a></li>
+        <li><a href="degisken.html">Değişkenler</a></li>
+        <li><a href="operator.html">Operatörler</a></li>
+        <li><a href="aritmetik.html">Aritmetik</a></li>
+        <li><a href="veritipleri.html">Veri Tipleri</a></li>
+        <li><a href="fonksiyon.html">Fonksiyon Yapısı</a></li>
+        <li><a href="olay.html">Olaylar(Events)</a></li>
+        <li><a href="stringsayi.html">Stringler, Sayılar</a></li>
+        <li><a href="dizi.html">Diziler ve Dizi İşlemleri</a></li>
+        <li><a href="kosul.html">If Koşul Yapıları</a></li>
+        <li><a href="dongu.html">Döngüler</a></li>
+        <li><a href="donusum.html">Tip Dönüşümleri</a></li>
+        <li><a href="mimari.html">Çalışma Yapısı ve Genel Mimarisi</a></li>
+        <h2>JS Fonksiyonlar</h2>
+        <li><a href="fonksiyontanimlari.html">Fonksiyon Tanımları</a></li>
+        <li><a href="fonksiyonparametreleri.html">Fonksiyon Parametreleri</a></li>
+        <li><a href="fonksiyoncagirma.html">Fonksiyon Çağırma</a></li>
+        <li><a href="callfonksiyonu.html">Call Fonksiyonu</a></li>
+        <li><a href="applyfonksiyonu.html">Apply Fonksiyonu</a></li>
+        <li><a href="jskapanislari.html">JS Kapanışları</a></li>
+        <h2>JS Nesneler</h2>
+        <li><a href="nesnetanimlama.html">Nesne Tanımlama</a></li>
+        <li><a href="nesneozellikleri.html">Nesne Özellikleri</a></li>
+        <li><a href="nesnemetotlari.html">Nesne Metotları</a></li>
+        <li><a href="goruntulemenesneleri.html">Görüntüleme Nesneleri</a></li>
+        <li><a href="nesneerisimcileri.html">Nesne Erişimcileri</a></li>
+        <li><a href="nesneolusturuculari.html">Nesne Oluşturucuları</a></li>
+        <li><a href="nesneprototipleri.html">Nesne Prototipleri</a></li>
+        <li><a href="es5nesneyontemleri.html">ES5 Nesne Yöntemleri</a></li>
+        <h2>JS HTML DOM</h2>
+        <li><a href="domintro.html">DOM Giriş</a></li>
+        <li><a href="dommetotlari.html">DOM Metotları</a></li>
+        <li><a href="dombelgesi.html">DOM Belgesi</a></li>
+        <li><a href="domogeleri.html">DOM Ögeleri</a></li>
+        <h2>Hafta 2 Uygulamalar</h2>
+        <li><a href="kullaniciformu.html">Kullanıcı Formu</a></li>
+    </ul>
+</div>
+<div class="example">
+    <h1>Nesne Metotları</h1>
+    <div id="rcorners2">
+        <p>var kisi = {</p>
+        <p>adi: "John",</p>
+        <p>soyadi: "Doe",</p>
+        <p>id: 5566,</p>
+        <p>tamAdi: function () {</p>
+        <p>this.adi + "" + this.soyadi döndürür;</p>
+        <p>}</p>
+        <p>};</p>
+    </div>
+    <h2>This Anahtar Kelimesi</h2>
+    <p>Bir işlev tanımında, bu işlevin "sahibini" ifade eder.</p>
+    <p>Yukarıdaki örnekte, this, fullName işlevine "sahip" olan kişi nesnesidir.</p>
+    <p>Başka bir deyişle, this.adi bu nesnenin adi özelliği anlamına gelir.</p>
+    <p>Bu anahtar kelime hakkında daha fazla bilgiyi JS this anahtar kelimesinde bulabilirsiniz.</p>
+    <h2>JavaScript Yöntemleri</h2>
+    <p>JavaScript yöntemleri, nesneler üzerinde gerçekleştirilebilecek eylemlerdir.</p>
+    <p>JavaScript yöntemi, işlev tanımı içeren bir özelliktir.</p>
+    <table>
+        <tr>
+            <th>Özellik</th>
+            <th>Değeri</th>
+        </tr>
+        <tr>
+            <td>ad</td>
+            <td>John</td>
+        </tr>
+        <tr>
+            <td>soyad</td>
+            <td>Doe</td>
+        </tr>
+        <tr>
+            <td>yas</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>gozRengi</td>
+            <td>mavi</td>
+        </tr>
+        <tr>
+            <td>fullName işlevi ()</td>
+            <td>{return this.firstName + "" + this.lastName;}</td>
+        </tr>
+    </table>
+    <p>Yöntemler, nesne özellikleri olarak depolanan işlevlerdir.</p>
+    <h2>Nesne Yöntemlerine Erişim</h2>
+    <p>Bir nesne yöntemine aşağıdaki sözdizimiyle erişirsiniz:</p>
+    <div id="rcorners1">
+        <p>objectName.methodName ()</p>
+    </div>
+    <p>Genellikle fullName () öğesini person nesnesinin bir yöntemi olarak ve fullName özelliğini de bir özellik olarak tanımlarsınız.</p>
+    <p>FullName özelliği () ile çağrıldığında (işlev olarak) yürütülür.</p>
+    <p>Bu örnek, bir kişi nesnesinin fullName () yöntemine erişir:</p>
+    <div id="rcorners1">
+        <p>name = person.fullName ();</p>
+    </div>
+    <p>FullName özelliğine () olmadan erişirseniz, işlev tanımını döndürür:</p>
+    <div id="rcorners1">
+        <p>name = person.fullName;</p>
+    </div>
+    <h2>Yerleşik Yöntemleri Kullanma</h2>
+    <p>Bu örnek, bir metni büyük harfe dönüştürmek için String nesnesinin toUpperCase () yöntemini kullanır:</p>
+    <div id="rcorners2">
+        <p>var message = "MERHABA DUNYA!";</p>
+        <p>var x = message.toUpperCase ();</p>
+    </div>
+    <p>Yukarıdaki kod yürütüldükten sonra x değeri:</p>
+    <div id="rcorners1">
+        <p>SELAM DUNYA!</p>
+    </div>
+    <h2>Bir Nesneye Yöntem Ekleme</h2>
+    <p>Bir nesneye yeni bir yöntem eklemek kolaydır:</p>
+    <div id="rcorners2">
+        <p> person.name = function () {</p>
+        <p>return this.firstName + "" + this.lastName;</p>
+        <p>};</p>
+    </div>
+</div>
+</body>
+</html>

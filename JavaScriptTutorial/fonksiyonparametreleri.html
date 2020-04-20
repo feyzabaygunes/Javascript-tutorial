@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Fonksiyon Parametreleri</title>
+    <link rel="stylesheet" href="js.css">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <h2>    JavaScript</h2>
+        <li><a href="giris.html">JavaScript Giriş</a></li>
+        <li><a href="syntax.html">Yazılım(Syntax) Yapısı</a></li>
+        <li><a href="degisken.html">Değişkenler</a></li>
+        <li><a href="operator.html">Operatörler</a></li>
+        <li><a href="aritmetik.html">Aritmetik</a></li>
+        <li><a href="veritipleri.html">Veri Tipleri</a></li>
+        <li><a href="fonksiyon.html">Fonksiyon Yapısı</a></li>
+        <li><a href="olay.html">Olaylar(Events)</a></li>
+        <li><a href="stringsayi.html">Stringler, Sayılar</a></li>
+        <li><a href="dizi.html">Diziler ve Dizi İşlemleri</a></li>
+        <li><a href="kosul.html">If Koşul Yapıları</a></li>
+        <li><a href="dongu.html">Döngüler</a></li>
+        <li><a href="donusum.html">Tip Dönüşümleri</a></li>
+        <li><a href="mimari.html">Çalışma Yapısı ve Genel Mimarisi</a></li>
+        <h2>JS Fonksiyonlar</h2>
+        <li><a href="fonksiyontanimlari.html">Fonksiyon Tanımları</a></li>
+        <li><a href="fonksiyonparametreleri.html">Fonksiyon Parametreleri</a></li>
+        <li><a href="fonksiyoncagirma.html">Fonksiyon Çağırma</a></li>
+        <li><a href="callfonksiyonu.html">Call Fonksiyonu</a></li>
+        <li><a href="applyfonksiyonu.html">Apply Fonksiyonu</a></li>
+        <li><a href="jskapanislari.html">JS Kapanışları</a></li>
+        <h2>JS Nesneler</h2>
+        <li><a href="nesnetanimlama.html">Nesne Tanımlama</a></li>
+        <li><a href="nesneozellikleri.html">Nesne Özellikleri</a></li>
+        <li><a href="nesnemetotlari.html">Nesne Metotları</a></li>
+        <li><a href="goruntulemenesneleri.html">Görüntüleme Nesneleri</a></li>
+        <li><a href="nesneerisimcileri.html">Nesne Erişimcileri</a></li>
+        <li><a href="nesneolusturuculari.html">Nesne Oluşturucuları</a></li>
+        <li><a href="nesneprototipleri.html">Nesne Prototipleri</a></li>
+        <li><a href="es5nesneyontemleri.html">ES5 Nesne Yöntemleri</a></li>
+        <h2>JS HTML DOM</h2>
+        <li><a href="domintro.html">DOM Giriş</a></li>
+        <li><a href="dommetotlari.html">DOM Metotları</a></li>
+        <li><a href="dombelgesi.html">DOM Belgesi</a></li>
+        <li><a href="domogeleri.html">DOM Ögeleri</a></li>
+        <h2>Hafta 2 Uygulamalar</h2>
+        <li><a href="kullaniciformu.html">Kullanıcı Formu</a></li>
+    </ul>
+</div>
+<div class="example">
+    <h1>JavaScript Fonksiyon Parametreleri</h1>
+    <p> JavaScript işlevi, parametre değerleri (bağımsız değişkenler) üzerinde herhangi bir denetim gerçekleştirmez.</p>
+    <h2>İşlev Parametreleri ve Bağımsız Değişkenler</h2>
+    <p>Bu öğreticinin başlarında, işlevlerin parametreleri olabileceğini öğrendiniz:</p>
+    <div id="rcorners2">
+        <p>function functionName (parametre1, parametre2, parametre3) {</p>
+        <p>// yürütülecek kod</p>
+        <p>}</p>
+    </div>
+    <p>İşlev parametreleri, işlev tanımında listelenen adlardır.</p>
+    <p>İşlev bağımsız değişkenleri, işleve iletilen (ve bu işlev tarafından alınan) gerçek değerlerdir.</p>
+    <h2>Parametre Kuralları</h2>
+    <p>JavaScript işlev tanımları, parametreler için veri türlerini belirtmez.</p>
+    <p>JavaScript işlevleri, iletilen bağımsız değişkenlerde tür denetimi gerçekleştirmez.</p>
+    <p>JavaScript işlevleri, alınan bağımsız değişkenlerin sayısını kontrol etmez.</p>
+    <h2>Parametre Varsayılanları</h2>
+    <p>Bir işlev eksik argümanlarla (bildirilenden daha az) çağrılırsa, eksik değerler şu şekilde ayarlanır: tanımsız</p>
+    <p>Bazen bu kabul edilebilir, ancak bazen parametreye varsayılan bir değer atamak daha iyidir:</p>
+    <div id="rcorners2">
+        <p>function myFunction (x, y) {</p>
+        <p>if (y === tanımsız) {</p>
+        <p>y = 0;</p>
+        <p>}</p>
+        <p>}</p>
+    </div>
+    <p>ECMAScript 2015, işlev bildiriminde varsayılan parametre değerlerine izin verir:</p>
+    <div id="rcorners2">
+        <p>function (a = 1, b = 1) {</p>
+        <p>// fonksiyon kodu</p>
+        <p>}</p>
+    </div>
+    <h2>Bağımsız Değişkenler Nesnesi</h2>
+    <p>JavaScript işlevlerinde arguments nesnesi adı verilen yerleşik bir nesne vardır.</p>
+    <p>Bağımsız değişken nesnesi, işlev çağrıldığında (çağrıldığında) kullanılan bir dizi bağımsız değişken içerir.</p>
+    <p>Bu şekilde, bir sayı listesindeki en yüksek değeri bulmak (örneğin) için bir işlevi kullanabilirsiniz:</p>
+    <div id="rcorners2">
+        <p>x = findMax (1, 123, 500, 115, 44, 88);</p>
+        <p>function findMax () {</p>
+        <p>var i;</p>
+        <p>var max = -Infinity;</p>
+        <p>for (i = 0; i <arguments.length; i ++) {</p>
+        <p>if (arguments[i] > max) {</p>
+        <p>max = arguments [i];</p>
+        <p>}</p>
+        <p>}</p>
+        <p>return max ;</p>
+        <p>}</p>
+    </div>
+    <p>Veya tüm giriş değerlerini toplamak için bir işlev oluşturun:</p>
+    <div id="rcorners2">
+        <p>x = sumAll (1, 123, 500, 115, 44, 88);</p>
+        <p>function sumAll () {</p>
+        <p>var i;</p>
+        <p>var sum = 0;</p>
+        <p>for (i = 0; i <arguments.length; i ++) {</p>
+        <p>sum + = arguments [i];</p>
+        <p>}</p>
+        <p>return sum;</p>
+        <p>}</p>
+    </div>
+    <p>Bir işlev çok fazla bağımsız değişkenle (bildirilenden fazla) çağrılırsa,
+        bu bağımsız değişkenlere arguments nesnesi kullanılarak erişilebilir.</p>
+    <h2>Bağımsız Değişkenler Değerden Geçirilir</h2>
+    <p>İşlev çağrısındaki parametreler, işlevin bağımsız değişkenleridir.</p>
+    <p>JavaScript bağımsız değişkenleri değere göre iletilir: İşlev, bağımsız değişkenin konumlarını değil,
+        yalnızca değerleri tanır.</p>
+    <p>Bir işlev bir bağımsız değişkenin değerini değiştirirse, parametrenin orijinal değerini değiştirmez.</p>
+    <p>Değişkenlerde yapılan değişiklikler işlevin dışında görünmez (yansıtılmaz).</p>
+    <h2>Nesneler Referans ile Geçirilir</h2>
+    <p>JavaScript'te nesne başvuruları değerlerdir.</p>
+    <p>Bu nedenle, nesneler referans olarak iletildikleri gibi davranacaktır:</p>
+    <p>Bir işlev bir nesne özelliğini değiştirirse, orijinal değeri değiştirir.</p>
+    <p>Nesne özelliklerinde yapılan değişiklikler işlevin dışında görünür (yansıtılır).</p><br><br>
+</div>
+</body>
+</html>

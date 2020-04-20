@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Nesne Erişimcileri</title>
+    <link rel="stylesheet" href="js.css">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <h2>    JavaScript</h2>
+        <li><a href="giris.html">JavaScript Giriş</a></li>
+        <li><a href="syntax.html">Yazılım(Syntax) Yapısı</a></li>
+        <li><a href="degisken.html">Değişkenler</a></li>
+        <li><a href="operator.html">Operatörler</a></li>
+        <li><a href="aritmetik.html">Aritmetik</a></li>
+        <li><a href="veritipleri.html">Veri Tipleri</a></li>
+        <li><a href="fonksiyon.html">Fonksiyon Yapısı</a></li>
+        <li><a href="olay.html">Olaylar(Events)</a></li>
+        <li><a href="stringsayi.html">Stringler, Sayılar</a></li>
+        <li><a href="dizi.html">Diziler ve Dizi İşlemleri</a></li>
+        <li><a href="kosul.html">If Koşul Yapıları</a></li>
+        <li><a href="dongu.html">Döngüler</a></li>
+        <li><a href="donusum.html">Tip Dönüşümleri</a></li>
+        <li><a href="mimari.html">Çalışma Yapısı ve Genel Mimarisi</a></li>
+        <h2>JS Fonksiyonlar</h2>
+        <li><a href="fonksiyontanimlari.html">Fonksiyon Tanımları</a></li>
+        <li><a href="fonksiyonparametreleri.html">Fonksiyon Parametreleri</a></li>
+        <li><a href="fonksiyoncagirma.html">Fonksiyon Çağırma</a></li>
+        <li><a href="callfonksiyonu.html">Call Fonksiyonu</a></li>
+        <li><a href="applyfonksiyonu.html">Apply Fonksiyonu</a></li>
+        <li><a href="jskapanislari.html">JS Kapanışları</a></li>
+        <h2>JS Nesneler</h2>
+        <li><a href="nesnetanimlama.html">Nesne Tanımlama</a></li>
+        <li><a href="nesneozellikleri.html">Nesne Özellikleri</a></li>
+        <li><a href="nesnemetotlari.html">Nesne Metotları</a></li>
+        <li><a href="goruntulemenesneleri.html">Görüntüleme Nesneleri</a></li>
+        <li><a href="nesneerisimcileri.html">Nesne Erişimcileri</a></li>
+        <li><a href="nesneolusturuculari.html">Nesne Oluşturucuları</a></li>
+        <li><a href="nesneprototipleri.html">Nesne Prototipleri</a></li>
+        <li><a href="es5nesneyontemleri.html">ES5 Nesne Yöntemleri</a></li>
+        <h2>JS HTML DOM</h2>
+        <li><a href="domintro.html">DOM Giriş</a></li>
+        <li><a href="dommetotlari.html">DOM Metotları</a></li>
+        <li><a href="dombelgesi.html">DOM Belgesi</a></li>
+        <li><a href="domogeleri.html">DOM Ögeleri</a></li>
+        <h2>Hafta 2 Uygulamalar</h2>
+        <li><a href="kullaniciformu.html">Kullanıcı Formu</a></li>
+    </ul>
+</div>
+<div class="example">
+    <h1>JavaScript Nesne Erişimcileri</h1>
+    <h2>JavaScript Erişicileri (Getter ve Setter)</h2>
+    <p>ECMAScript 5 (2009) Getter ve Setters'ı tanıttı.</p>
+    <p>Harfler ve ayarlayıcılar Nesne Erişimcilerini (Hesaplanan Özellikler) tanımlamanızı sağlar.</p>
+    <h2>JavaScript Getter (Get Anahtar Kelimesi)</h2>
+    <p>Bu örnek, language özelliğinin değerini almak için bir lang özelliği kullanır.</p>
+    <div id="rcorners2">
+        <p>// Nesne oluşturma:</p>
+        <p>var kisi = {</p>
+        <p>ad: "John",</p>
+        <p>soyadi: "Doe",</p>
+        <p>dil: "en",</p>
+        <p>get dil () {</p>
+        <p>return dil;</p>
+        <p>}</p>
+        <p>};</p><br>
+        <p>// Alıcıyı kullanarak nesneden veri görüntüleme:</p>
+        <p>document.getElementById ("demo"). innerHTML = kisi.dil;</p>
+    </div>
+    <div id="rcorners2"></div>
+    <h2>JavaScript Setter (Set Anahtar Kelimesi)</h2>
+    <p>Bu örnek, language özelliğinin değerini ayarlamak için bir lang özelliği kullanır.</p>
+    <div id="rcorners2">
+        <p>var kisi = {</p>
+        <p>adi: "John",</p>
+        <p>soyadi: "Doe",</p>
+        <p>dil: "",</p>
+        <p>set dil (dil) {</p>
+        <p>this.language = dil;</p>
+        <p>}</p>
+        <p>};</p><br>
+        <p>// Bir ayarlayıcı kullanarak bir nesne özelliği ayarlama:</p>
+        <p>kisi.dil = "en";</p><br>
+        <p>// Nesneden veri görüntüleme:</p>
+        <p>document.getElementById ( "demo"). innerHTML = person.language;</p>
+    </div>
+    <h2>JavaScript İşlevi veya Getter?</h2>
+    <p>Bu iki örnek arasındaki farklar nelerdir?</p>
+    <div id="rcorners2">
+        <p>Örnek 1</p>
+        <p>var kisi = {</p>
+        <p>adi: "John",</p>
+        <p>soyadi: "Doe",</p>
+        <p>tamAdi: function () {</p>
+        <p>return this.adi + "" + this.soyadi;</p>
+        <p>}</p>
+        <p>};</p><br>
+        <p>// Bir yöntem kullanarak nesneden veri görüntüleme:</p>
+        <p>document.getElementById ("demo"). innerHTML = kisi.tamAdi ();</p>
+    </div>
+    <div id="rcorners2">
+        <p>Örnek 2</p>
+        <p>var kisi = {</p>
+        <p>adi: "John",</p>
+        <p>soyadi: "Doe",</p>
+        <p>tamAdi () {</p>
+        <p>return this.adi + "" + this.soyadi;</p>
+        <p>}</p>
+        <p>};</p><br>
+        <p>// Alıcıyı kullanarak nesneden veri görüntüleme:</p>
+        <p>document.getElementById ("demo"). innerHTML = person.fullName;</p>
+    </div>
+    <p>Örnek 1 tamAdi işlevine erişim: kisi.tamAdi ().</p>
+    <p>Örnek 2 tamAdi'na özellik olarak erişin: kisi.tamAdi.</p>
+    <p>İkinci örnek daha basit bir sözdizimi sağlar.</p>
+    <h2>Veri kalitesi</h2>
+    <p>JavaScript, alıcıları ve ayarlayıcıları kullanırken daha iyi veri kalitesi sağlayabilir.</p>
+    <p>Bu örnekte lang özelliğini kullanma, language özelliğinin değerini büyük harf olarak döndürür:</p>
+    <div id="rcorners2">
+        <p>// Nesne oluşturma:</p>
+        <p>var kisi = {</p>
+        <p>adi: "John",</p>
+        <p>soyadi: "Doe",</p>
+        <p>dil: "en",</p>
+        <p>get dil () {</p>
+        <p>return this.language.toUpperCase();</p>
+        <p>}</p>
+        <p>};</p><br>
+        <p>// Alıcıyı kullanarak nesneden veri görüntüleme:</p>
+        <p>document.getElementById ("demo"). innerHTML = person.lang;</p>
+    </div>
+    <p>Bu örnekte lang özelliğini kullanmak, language özelliğinde bir büyük harf değeri depolar:</p>
+    <div id="rcorners2">
+        <p>var kisi = {</p>
+        <p>adi: "John",</p>
+        <p>soyadi: "Doe",</p>
+        <p>dil: "",</p>
+        <p>set dil (dil) {</p>
+        <p>this.language = dil.toUpperCase ();</p>
+        <p>}</p>
+        <p>};</p><br>
+        <p>// Bir ayarlayıcı kullanarak bir nesne özelliği ayarlama:</p>
+        <p>kisi.dil = "en";</p><br>
+        <p>// Nesneden veri görüntüleme:</p>
+        <p>document.getElementById ("demo"). innerHTML = kisi.language;</p>
+    </div>
+    <h2>Neden Harf ve Ayarlayıcılar Kullanılmalı?</h2>
+    <p><li>Daha basit bir sözdizimi sağlar</li></p>
+    <p><li>Özellikler ve yöntemler için eşit sözdizimine izin verir</li></p>
+    <p><li>Daha iyi veri kalitesi sağlayabilir</li></p>
+    <p><li>Sahne arkasındaki işleri yapmak için kullanışlıdır</li></p>
+    <h2>Object.defineProperty ()</h2>
+    <p>Getters ve Setters eklemek için defineProperty () yöntemi de kullanılabilir:</p>
+    <div id="rcorners2">
+        <p> // Nesneyi tanımla</p>
+        <p>var obj = {sayaç: 0};</p><br>
+        <p> // Ayarlayıcıları tanımla</p>
+        <p>Object.defineProperty (obj, "sıfırla", {</p>
+        <p>get: function () {this.counter = 0;}</p>
+        <p>});</p><br>
+        <p>Object.defineProperty (obj, "artış", {</p>
+        <p>get: function () {this.counter ++;}</p>
+        <p>});</p><br>
+        <p> Object.defineProperty (obj, "azalma", {</p>
+        <p>get: function () {this.counter--;}</p>
+        <p>});</p><br>
+        <p> Object.defineProperty (obj, "ekle", {</p>
+        <p>set: function (değer) {this.counter + = değer;}</p>
+        <p>});</p><br>
+        <p>Object.defineProperty (obj, "çıkarma", {</p>
+        <p>set: function (değer) {this.counter - = değer;}</p>
+        <p>});</p><br>
+        <p>// Sayaçla oynayın:</p>
+        <p>obj.reset;</p>
+        <p>obj.add = 5;</p>
+        <p>obj.subtract = 1;</p>
+        <p>obj.increment;</p>
+        <p>obj.decrement;</p>
+    </div>
+    <h2>Tarayıcı Desteği</h2>
+    <p>Getters ve Setters, Internet Explorer 8 veya önceki sürümlerde desteklenmez.</p><br>
+</div>
+</body>
+</html>

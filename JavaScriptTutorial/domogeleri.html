@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS HTML DOM Ögeleri</title>
+    <link rel="stylesheet" href="js.css">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <h2>    JavaScript</h2>
+        <li><a href="giris.html">JavaScript Giriş</a></li>
+        <li><a href="syntax.html">Yazılım(Syntax) Yapısı</a></li>
+        <li><a href="degisken.html">Değişkenler</a></li>
+        <li><a href="operator.html">Operatörler</a></li>
+        <li><a href="aritmetik.html">Aritmetik</a></li>
+        <li><a href="veritipleri.html">Veri Tipleri</a></li>
+        <li><a href="fonksiyon.html">Fonksiyon Yapısı</a></li>
+        <li><a href="olay.html">Olaylar(Events)</a></li>
+        <li><a href="stringsayi.html">Stringler, Sayılar</a></li>
+        <li><a href="dizi.html">Diziler ve Dizi İşlemleri</a></li>
+        <li><a href="kosul.html">If Koşul Yapıları</a></li>
+        <li><a href="dongu.html">Döngüler</a></li>
+        <li><a href="donusum.html">Tip Dönüşümleri</a></li>
+        <li><a href="mimari.html">Çalışma Yapısı ve Genel Mimarisi</a></li>
+        <h2>JS Fonksiyonlar</h2>
+        <li><a href="fonksiyontanimlari.html">Fonksiyon Tanımları</a></li>
+        <li><a href="fonksiyonparametreleri.html">Fonksiyon Parametreleri</a></li>
+        <li><a href="fonksiyoncagirma.html">Fonksiyon Çağırma</a></li>
+        <li><a href="callfonksiyonu.html">Call Fonksiyonu</a></li>
+        <li><a href="applyfonksiyonu.html">Apply Fonksiyonu</a></li>
+        <li><a href="jskapanislari.html">JS Kapanışları</a></li>
+        <h2>JS Nesneler</h2>
+        <li><a href="nesnetanimlama.html">Nesne Tanımlama</a></li>
+        <li><a href="nesneozellikleri.html">Nesne Özellikleri</a></li>
+        <li><a href="nesnemetotlari.html">Nesne Metotları</a></li>
+        <li><a href="goruntulemenesneleri.html">Görüntüleme Nesneleri</a></li>
+        <li><a href="nesneerisimcileri.html">Nesne Erişimcileri</a></li>
+        <li><a href="nesneolusturuculari.html">Nesne Oluşturucuları</a></li>
+        <li><a href="nesneprototipleri.html">Nesne Prototipleri</a></li>
+        <li><a href="es5nesneyontemleri.html">ES5 Nesne Yöntemleri</a></li>
+        <h2>JS HTML DOM</h2>
+        <li><a href="domintro.html">DOM Giriş</a></li>
+        <li><a href="dommetotlari.html">DOM Metotları</a></li>
+        <li><a href="dombelgesi.html">DOM Belgesi</a></li>
+        <li><a href="domogeleri.html">DOM Ögeleri</a></li>
+        <h2>Hafta 2 Uygulamalar</h2>
+        <li><a href="kullaniciformu.html">Kullanıcı Formu</a></li>
+    </ul>
+</div>
+<div class="example">
+    <h1> JavaScript HTML  DOM Öğeleri </h1>
+        <p>Bu sayfa size bir HTML sayfasındaki HTML öğelerini nasıl bulacağınızı ve erişeceğinizi öğretir.</p>
+        <h2>HTML Öğelerini Bulma</h2>
+
+        <p>Genellikle JavaScript ile HTML öğelerini değiştirmek istersiniz.</p>
+        <p>Bunu yapmak için önce elemanları bulmalısınız. Bunu yapmanın birkaç yolu vardır:</p>
+        <p><li>HTML öğelerini kimliğe göre bulma</li>
+            <li>Etiket adına göre HTML öğeleri bulma</li>
+            <li>Sınıf adına göre HTML öğeleri bulma</li>
+            <li>CSS seçicileri ile HTML öğeleri bulma</li>
+            <li>HTML nesnesi koleksiyonlarına göre HTML öğelerini bulma</li></p>
+
+        <h2>Kimliğe Göre HTML Öğesi Bulma</h2>
+        <p>DOM'de bir HTML öğesi bulmanın en kolay yolu, öğe kimliğini kullanmaktır.</p>
+        <p>Bu örnek şu öğeyi bulur id="intro":</p>
+        <div id="rcorners2">
+            <p>var myElement = document.getElementById("intro");</p>
+        </div>
+        <p>Öğe bulunursa, yöntem öğeyi nesne olarak döndürür (myElement öğesinde).</p>
+        <p>Öğe bulunamazsa, myElement içerecektir null.</p>
+        <h2>Etiket Adına Göre HTML Öğelerini Bulma</h2>
+        <p>Bu örnek tüm <p>öğeleri bulur :</p>
+        <div id="rcorners2">
+            <p>var x = document.getElementsByTagName("p");</p>
+        </div>
+        <p>Bu örnekte öğeyi bulur ve içindeki id="main"tüm <p>öğeleri bulur "main":</p>
+        <div id="rcorners2">
+            <p>var x = document.getElementById("main");</p>
+            <p>var y = x.getElementsByTagName("p");</p>
+        </div>
+        <h2>Sınıf Adına Göre HTML Öğelerini Bulma</h2>
+        <p>Aynı sınıf adına sahip tüm HTML öğelerini bulmak istiyorsanız, kullanın getElementsByClassName().</p>
+        <p>Bu örnek, ile tüm öğelerin bir listesini döndürür class="intro".</p>
+        <div id="rcorners2">
+            <p>var x = document.getElementsByClassName("intro");</p>
+        </div>
+
+        <p>Sınıf adına göre öğe bulma, Internet Explorer 8 ve önceki sürümlerinde çalışmaz.</p>
+
+        <h2>CSS Seçicileri ile HTML Öğeleri Bulma</h2>
+        <p>Belirli bir CSS seçicisiyle eşleşen tüm HTML öğelerini (id, sınıf adları, türleri, öznitelikleri, öznitelik değerleri, vb.)
+            Bulmak istiyorsanız, querySelectorAll()yöntemi kullanın .</p>
+        <div id="rcorners2">
+            <p>var x = document.querySelectorAll("p.intro");</p>
+        </div>
+        <p>querySelectorAll()Yöntem Internet Explorer 8 ve önceki sürümlerinde çalışmaz.</p>
+
+        <h2>HTML Nesne Koleksiyonlarına Göre HTML Öğelerini Bulma</h2>
+
+        <p>Bu örnek id="frm1", form koleksiyonunu form koleksiyonunda bulur ve tüm öğe değerlerini görüntüler:</p>
+
+        <div id="rcorners2">
+            <p>var x = document.forms["frm1"];</p>
+            <p>var text = "";</p>
+            <p>var i;</p>
+            <p>for (i = 0; i < x.length; i++) {</p>
+            <p>text += x.elements[i].value + "<br>";</p>
+            <p>}</p>
+            <p>document.getElementById("demo").innerHTML = text;</p>
+        </div>
+
+</div>
+</body>
+</html>

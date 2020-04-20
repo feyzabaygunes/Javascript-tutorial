@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Fonksiyonları</title>
+    <link rel="stylesheet" href="js.css">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <h2>    JavaScript</h2>
+        <li><a href="giris.html">JavaScript Giriş</a></li>
+        <li><a href="syntax.html">Yazılım(Syntax) Yapısı</a></li>
+        <li><a href="degisken.html">Değişkenler</a></li>
+        <li><a href="operator.html">Operatörler</a></li>
+        <li><a href="aritmetik.html">Aritmetik</a></li>
+        <li><a href="veritipleri.html">Veri Tipleri</a></li>
+        <li><a href="fonksiyon.html">Fonksiyon Yapısı</a></li>
+        <li><a href="olay.html">Olaylar(Events)</a></li>
+        <li><a href="stringsayi.html">Stringler, Sayılar</a></li>
+        <li><a href="dizi.html">Diziler ve Dizi İşlemleri</a></li>
+        <li><a href="kosul.html">If Koşul Yapıları</a></li>
+        <li><a href="dongu.html">Döngüler</a></li>
+        <li><a href="donusum.html">Tip Dönüşümleri</a></li>
+        <li><a href="mimari.html">Çalışma Yapısı ve Genel Mimarisi</a></li>
+        <h2>JS Fonksiyonlar</h2>
+        <li><a href="fonksiyontanimlari.html">Fonksiyon Tanımları</a></li>
+        <li><a href="fonksiyonparametreleri.html">Fonksiyon Parametreleri</a></li>
+        <li><a href="fonksiyoncagirma.html">Fonksiyon Çağırma</a></li>
+        <li><a href="callfonksiyonu.html">Call Fonksiyonu</a></li>
+        <li><a href="applyfonksiyonu.html">Apply Fonksiyonu</a></li>
+        <li><a href="jskapanislari.html">JS Kapanışları</a></li>
+        <h2>JS Nesneler</h2>
+        <li><a href="nesnetanimlama.html">Nesne Tanımlama</a></li>
+        <li><a href="nesneozellikleri.html">Nesne Özellikleri</a></li>
+        <li><a href="nesnemetotlari.html">Nesne Metotları</a></li>
+        <li><a href="goruntulemenesneleri.html">Görüntüleme Nesneleri</a></li>
+        <li><a href="nesneerisimcileri.html">Nesne Erişimcileri</a></li>
+        <li><a href="nesneolusturuculari.html">Nesne Oluşturucuları</a></li>
+        <li><a href="nesneprototipleri.html">Nesne Prototipleri</a></li>
+        <li><a href="es5nesneyontemleri.html">ES5 Nesne Yöntemleri</a></li>
+        <h2>JS HTML DOM</h2>
+        <li><a href="domintro.html">DOM Giriş</a></li>
+        <li><a href="dommetotlari.html">DOM Metotları</a></li>
+        <li><a href="dombelgesi.html">DOM Belgesi</a></li>
+        <li><a href="domogeleri.html">DOM Ögeleri</a></li>
+        <h2>Hafta 2 Uygulamalar</h2>
+        <li><a href="kullaniciformu.html">Kullanıcı Formu</a></li>
+    </ul>
+</div>
+<div class="example">
+    <h1>JavaScript Fonksiyon Tanımları</h1>
+    <p>JavaScript işlevleri, function anahtar sözcüğü ile tanımlanır.</p>
+    <p>Bir işlev bildirimi veya bir işlev ifadesi kullanabilirsiniz.</p>
+    <h2>İşlev Beyanları</h2>
+    <div id="rcorners2">
+        <p>function functionName (parametreler) {</p>
+        <p>// yürütülecek kod</p>
+        <p>}</p>
+    </div>
+    <p>Bildirilen işlevler hemen yürütülmez. "Daha sonra kullanılmak üzere kaydedilirler" ve çağrıldıklarında
+        (çağrıldıklarında) daha sonra çalıştırılırlar.</p>
+    <div id="rcorners2">
+        <p>function myFunction (a, b) {</p>
+        <p>return * b;</p>
+        <p>}</p>
+    </div>
+    <p>Noktalı virgüller yürütülebilir JavaScript ifadelerini ayırmak için kullanılır.</p>
+    <p>İşlev bildirimi yürütülebilir bir ifade olmadığından, noktalı virgülle bitirmek yaygın değildir.</p>
+    <h2>İşlev İfadeleri</h2>
+    <p>Bir JavaScript işlevi bir ifade kullanılarak da tanımlanabilir.</p>
+    <p>Bir işlev ifadesi bir değişkende saklanabilir:</p>
+    <div id="rcorners2">
+        <p>var x = function (a, b) {;</p>
+        <p>return * b</p>
+        <p>}</p>
+    </div>
+    <p>Bir işlev ifadesi bir değişkende saklandıktan sonra, değişken bir işlev olarak kullanılabilir:</p>
+    <div id="rcorners2">
+        <p>var x = function (a, b) {;</p>
+        <p>return * b</p>
+        <p>}</p>
+        <p>var z = x (4, 3);</p>
+    </div>
+    <p>Yukarıdaki işlev aslında anonim bir işlevdir (adsız bir işlev).</p>
+    <p>Değişkenlerde saklanan fonksiyonların fonksiyon isimlerine ihtiyacı yoktur. Değişken adı kullanılarak her zaman çağrılır (çağrılır).
+        Yukarıdaki işlev, noktalı virgülle biter, çünkü yürütülebilir bir ifadenin bir parçasıdır.</p>
+    <h2>Function () Yapıcı Metodu</h2>
+    <p>Önceki örneklerde gördüğünüz gibi, JavaScript işlevleri function anahtar sözcüğü ile tanımlanır.</p>
+    <p>İşlevler ayrıca Function () adlı yerleşik bir JavaScript işlev yapıcısıyla da tanımlanabilir.</p>
+    <div id="rcorners2">
+        <p>var myFunction = new Function ("a", "b", "dönüş * b");</p>
+        <p>var x = myFunction (4, 3);</p>
+    </div>
+    <p>Aslında işlev yapıcısını kullanmak zorunda değilsiniz. Yukarıdaki örnek yazmakla aynıdır:</p>
+    <div id="rcorners2">
+        <p>var myFunction = işlev (a, b) {dönüş * b};</p>
+        <p>var x = myFunction (4, 3);</p>
+    </div>
+    <p>Çoğu zaman, JavaScript'te new anahtar kelimesini kullanmaktan kaçınabilirsiniz.</p>
+    <h2>Fonksiyon Kaldırma</h2>
+    <p>Kaldırma, JavaScript'in bildirimleri geçerli kapsamın üstüne taşıma varsayılan davranışıdır.</p>
+    <p>Kaldırma, değişken bildirimler ve işlev bildirimleri için geçerlidir.</p>
+    <p>Bu nedenle, JavaScript işlevleri bildirilmeden önce çağrılabilir:</p>
+    <div id="rcorners2">
+        <p>myFunction (5);</p>
+        <p>funciton myFunction (y) {</p>
+        <p>return y * y;</p>
+        <p>}</p>
+    </div>
+    <p>Bir ifade kullanılarak tanımlanan işlevler kaldırılmaz.</p>
+    <h2>Kendini Çağırma İşlevleri</h2>
+    <h3>İşlev ifadeleri "kendi kendini çağıran" yapılabilir.</h3>
+    <p>Kendini çağıran bir ifade çağrılmadan otomatik olarak çağrılır (başlatılır).</p>
+    <p>İfadeyi () izliyorsa işlev ifadeleri otomatik olarak yürütülür.</p>
+    <p>Bir işlev bildirimini kendiniz çağıramazsınız.</p>
+    <p>Bir işlev ifadesi olduğunu belirtmek için işlevin etrafına parantez eklemeniz gerekir:</p>
+    <div id="rcorners2">
+        <p>(function () {</p>
+        <p>var x = "Merhaba !!"; // kendimi çağıracağım</p>
+        <p>}) ();</p>
+    </div>
+    <p>Yukarıdaki işlev aslında anonim kendi kendini çağıran bir işlevdir (adsız işlev).</p>
+    <h2>İşlevler Değer Olarak Kullanılabilir</h2>
+    <p>JavaScript işlevleri değer olarak kullanılabilir:</p>
+    <div id="rcorners2">
+        <p>function myFunction (a, b) {</p>
+        <p>return * b;</p>
+        <p>}</p>
+        <p>var x = myFunction (4, 3);</p>
+    </div>
+    <p>JavaScript işlevleri ifadelerde kullanılabilir:</p>
+    <div id="rcorners2">
+        <p>function myFunction (a, b) </p>
+        <p>return * b;</p>
+        <p>}</p>
+        <p>var x = myFunction (4, 3) * 2;</p>
+    </div>
+    <h2>İşlevler Nesnelerdir</h2>
+    <p>JavaScript'teki typeof operatörü işlevler için "function" döndürür.
+        Ancak, JavaScript işlevleri en iyi nesne olarak tanımlanabilir.</p>
+    <p>JavaScript işlevlerinin hem özellikleri hem de yöntemleri vardır.</p>
+    <h2>Argümanlar</h2>
+    <p>Length özelliği, işlev çağrıldığında alınan bağımsız değişkenlerin sayısını döndürür:</p>
+    <div id="rcorners2">
+        <p>function myFunction (a, b) {</p>
+        <p>return arguments.length;</p>
+        <p>}</p>
+    </div>
+    <p>ToString () yöntemi işlevi bir dize olarak döndürür:</p>
+    <div id="rcorners2">
+        <p>function myFunction (a, b) {</p>
+        <p>return * b;</p>
+        <p>}</p>
+        <p>var txt = myFunction.toString ();</p>
+    </div>
+    <p>Bir nesnenin özelliği olarak tanımlanan bir işleve, nesneye yöntem denir.</p>
+    <p>Yeni nesneler oluşturmak için tasarlanmış bir işleve nesne yapıcısı denir.</p>
+    <h2>Arrow İşlevleri</h2>
+    <p>Arrow işlevleri, işlev ifadeleri yazmak için kısa bir sözdizimi sağlar.</p>
+    <p>Function anahtar sözcüğüne, return anahtar sözcüğüne ve süslü parantezlere ihtiyacınız yoktur.</p>
+    <div id="rcorners2">
+        <p>// ES5</p>
+        <p>var x = function (x, y) {</p>
+        <p>return x * y;</p>
+        <p>}</p>
+        <p>// ES6</p>
+        <p>const x = (x, y) => x * y;</p>
+    </div>
+    <p>Arrow fonksiyonlarının kendilerine ait bir yönü yoktur. Nesne yöntemlerini tanımlamak için uygun değildirler.</p>
+    <p>Arrow fonksiyonları kaldırılmaz. Kullanılmadan önce tanımlanmalıdırlar.</p>
+    <p>Const kullanmak var kullanmaktan daha güvenlidir, çünkü bir işlev ifadesi her zaman sabit değerdir.</p>
+    <p>Return anahtar sözcüğünü ve süslü ayraçları yalnızca işlev tek bir deyimse atlayabilirsiniz. </p>
+    <p>Bu nedenle, onları her zaman tutmak iyi bir alışkanlık olabilir:</p>
+    <div id="rcorners2">
+        <p>const x = (x, y) => {return x * y};</p>
+    </div>
+
+</div>
+</body>
+</html>

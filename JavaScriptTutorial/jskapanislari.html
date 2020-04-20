@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Kapanışları</title>
+    <link rel="stylesheet" href="js.css">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <h2>    JavaScript</h2>
+        <li><a href="giris.html">JavaScript Giriş</a></li>
+        <li><a href="syntax.html">Yazılım(Syntax) Yapısı</a></li>
+        <li><a href="degisken.html">Değişkenler</a></li>
+        <li><a href="operator.html">Operatörler</a></li>
+        <li><a href="aritmetik.html">Aritmetik</a></li>
+        <li><a href="veritipleri.html">Veri Tipleri</a></li>
+        <li><a href="fonksiyon.html">Fonksiyon Yapısı</a></li>
+        <li><a href="olay.html">Olaylar(Events)</a></li>
+        <li><a href="stringsayi.html">Stringler, Sayılar</a></li>
+        <li><a href="dizi.html">Diziler ve Dizi İşlemleri</a></li>
+        <li><a href="kosul.html">If Koşul Yapıları</a></li>
+        <li><a href="dongu.html">Döngüler</a></li>
+        <li><a href="donusum.html">Tip Dönüşümleri</a></li>
+        <li><a href="mimari.html">Çalışma Yapısı ve Genel Mimarisi</a></li>
+        <h2>JS Fonksiyonlar</h2>
+        <li><a href="fonksiyontanimlari.html">Fonksiyon Tanımları</a></li>
+        <li><a href="fonksiyonparametreleri.html">Fonksiyon Parametreleri</a></li>
+        <li><a href="fonksiyoncagirma.html">Fonksiyon Çağırma</a></li>
+        <li><a href="callfonksiyonu.html">Call Fonksiyonu</a></li>
+        <li><a href="applyfonksiyonu.html">Apply Fonksiyonu</a></li>
+        <li><a href="jskapanislari.html">JS Kapanışları</a></li>
+        <h2>JS Nesneler</h2>
+        <li><a href="nesnetanimlama.html">Nesne Tanımlama</a></li>
+        <li><a href="nesneozellikleri.html">Nesne Özellikleri</a></li>
+        <li><a href="nesnemetotlari.html">Nesne Metotları</a></li>
+        <li><a href="goruntulemenesneleri.html">Görüntüleme Nesneleri</a></li>
+        <li><a href="nesneerisimcileri.html">Nesne Erişimcileri</a></li>
+        <li><a href="nesneolusturuculari.html">Nesne Oluşturucuları</a></li>
+        <li><a href="nesneprototipleri.html">Nesne Prototipleri</a></li>
+        <li><a href="es5nesneyontemleri.html">ES5 Nesne Yöntemleri</a></li>
+        <h2>JS HTML DOM</h2>
+        <li><a href="domintro.html">DOM Giriş</a></li>
+        <li><a href="dommetotlari.html">DOM Metotları</a></li>
+        <li><a href="dombelgesi.html">DOM Belgesi</a></li>
+        <li><a href="domogeleri.html">DOM Ögeleri</a></li>
+        <h2>Hafta 2 Uygulamalar</h2>
+        <li><a href="kullaniciformu.html">Kullanıcı Formu</a></li>
+    </ul>
+</div>
+<div class="example">
+    <h1>JavaScript Kapanışları</h1>
+    <p>JavaScript değişkenleri yerel veya global kapsama ait olabilir.</p>
+    <p>Global değişkenler kapanışlarla yerel (özel) yapılabilir.</p>
+    <h2>Global Değişkenler</h2>
+    <p>Bir işlev, işlevin içinde tanımlanan tüm değişkenlere şu şekilde erişebilir:</p>
+    <div id="rcorners2">
+        <p>function myFunction () {</p>
+        <p>var a = 4;</p>
+        <p>return a * a;</p>
+        <p>}</p>
+    </div>
+    <p>Ancak bir işlev, işlev dışında tanımlanan değişkenlere de şu şekilde erişebilir:</p>
+    <div id="rcorners2">
+        <p>var a = 4;</p>
+        <p>function myFunction () {</p>
+        <p>return a * a;</p>
+        <p>}</p>
+    </div>
+    <p>Son örnekte, a global bir değişkendir.</p>
+    <p>Bir web sayfasında, global değişkenler pencere nesnesine aittir.</p>
+    <p>Genel değişkenler sayfadaki (ve penceredeki) tüm komut dosyaları tarafından kullanılabilir (ve değiştirilebilir).</p>
+    <p>İlk örnekte, a yerel bir değişkendir.</p>
+    <p>Bir yerel değişken sadece tanımlandığı fonksiyonun içinde kullanılabilir.
+        Diğer işlevlerden ve diğer komut dosyası kodlarından gizlenir.</p>
+    <p>Aynı ada sahip genel ve yerel değişkenler farklı değişkenlerdir.</p>
+    <p>Birini değiştirmek diğerini değiştirmez.</p>
+    <div id="rcorners3">
+        <p>Bir bildirim anahtar kelimesi olmadan oluşturulan değişkenler (var, let veya const),
+            bir işlev içinde oluşturulmuş olsalar bile her zaman globaldir.</p>
+    </div>
+    <h2>Değişken Ömrü</h2>
+    <p>Genel değişkenler, başka bir sayfaya gittiğinizde veya pencereyi kapattığınızda olduğu gibi sayfa atılana kadar yaşar.</p>
+    <p>Yerel değişkenlerin kısa ömürleri vardır. Bunlar işlev çağrıldığında oluşturulur ve işlev tamamlandığında silinir.</p>
+    <h2>Bir Karşı İkilem</h2>
+    <p>Bir şeyi saymak için bir değişken kullanmak istediğinizi ve bu sayacın tüm işlevler için kullanılabilir
+        olmasını istediğinizi varsayalım.</p>
+    <p>Genel bir değişken ve sayacı artırmak için bir işlev kullanabilirsiniz:</p>
+    <div id="rcorners2">
+        <p>// Sayacı başlat</p>
+        <p>var sayaç = 0;</p><br>
+        <p>// Sayacı arttırma işlevi</p>
+        <p>function add () {</p>
+        <p>sayaç + = 1;</p>
+        <p>}</p><br>
+        <p>// 3 kez çağrı ekle ()</p>
+        <p>add();</p>
+        <p>add();</p>
+        <p>add();</p>
+        <p>// Sayaç şimdi 3 olmalı</p>
+    </div>
+    <p>Yukarıdaki çözümde bir sorun var: Sayfadaki herhangi bir kod, add () öğesini çağırmadan sayacı değiştirebilir.</p>
+    <p>Sayaç add () işlevinde yerel olmalıdır, diğer kodların değiştirilmesini önlemek için:</p>
+    <div id="rcorners2">
+        <p>// Sayacı başlat</p>
+        <p>var sayaç = 0;</p><br>
+        <p>// Sayacı arttırma işlevi</p>
+        <p>function add () {</p>
+        <p>var sayac = 0;</p>
+        <p>sayaç + = 1;</p>
+        <p>}</p><br>
+        <p>// 3 kez çağrı ekle ()</p>
+        <p>add();</p>
+        <p>add();</p>
+        <p>add();</p><br>
+        <p>// Sayaç şimdi 3 olmalı. Ama 0</p>
+    </div>
+    <p>İşe yaramadı çünkü yerel sayaç yerine global sayacı görüntülüyoruz.</p>
+    <p>Genel sayacı kaldırabilir ve işlevin geri döndürmesine izin vererek yerel sayaca erişebiliriz:</p>
+    <div id="rcorners2">
+        <p>// Sayacı arttırma işlevi</p>
+        <p>function add () {</p>
+        <p>var sayaç = 0;</p>
+        <p>sayaç + = 1;</p>
+        <p>return sayaç;</p>
+        <p>}</p><br>
+        <p>// 3 kez çağrı ekle ()</p>
+        <p>add();</p>
+        <p>add();</p>
+        <p>add();</p><br>
+        <p>// Sayaç şimdi 3 olmalı. Ama 1.</p>
+    </div>
+    <p>İşlevi her çağırdığımızda yerel sayacı sıfırladığımız için çalışmadı.</p>
+    <p>Bir JavaScript iç işlevi bunu çözebilir.</p>
+    <h2>JavaScript İç İçe İşlevler</h2>
+    <p>Tüm işlevlerin global kapsama erişimi vardır.</p>
+    <p>Aslında, JavaScript'te, tüm işlevlerin kendilerinin "üstündeki" kapsama erişimi vardır.</p>
+    <p>JavaScript iç içe işlevleri destekler. Yuvalanmış işlevler, "üstte" olan kapsama erişebilir.</p>
+    <p>Bu örnekte iç işlev plus (), üst işlevdeki sayaç değişkenine erişime sahiptir:</p>
+    <div id="rcorners2">
+        <p>function add () {</p>
+        <p>var sayaç = 0;</p>
+        <p>function add () {sayaç + = 1;}</p>
+        <p>add();</p>
+        <p>return sayaç;</p>
+        <p>}</p>
+    </div>
+    <p>Dışarıdan plus () işlevine erişebilseydik, bu karşı ikilemi çözebilirdi.</p>
+    <p>Ayrıca counter = 0'ı yalnızca bir kez yürütmenin bir yolunu bulmamız gerekir.</p>
+    <p>Bir kapanmaya ihtiyacımız var.</p>
+    <h2>JavaScript Kapanışları</h2>
+    <p>Kendini çağıran işlevleri hatırlıyor musunuz? Bu işlev ne işe yarar?</p>
+    <div id="rcorners2">
+        <p>var add = (function () {</p>
+        <p>var sayaç = 0;</p>
+        <p>return function () {counter += 1; return counter}</p>
+        <p>})();</p><br>
+        <p>add();</p>
+        <p>add();</p>
+        <p>add();</p><br>
+        <p>// sayaç şimdi 3</p>
+    </div>
+    <h2>Açıklanan Örnek</h2>
+    <p>Add değişkeni, kendini çağırma işlevinin dönüş değeri olarak atanır.</p>
+    <p>Kendini çağırma işlevi yalnızca bir kez çalışır. Sayacı sıfıra (0) ayarlar ve bir işlev ifadesi döndürür.
+        Bu şekilde ekleme işlevi olur. "Harika" kısmı, ana kapsamdaki sayaca erişebilmesidir.</p>
+    <p>Buna JavaScript kapatma adı verilir. Bir fonksiyonun "özel" değişkenlere sahip olmasını mümkün kılar.</p>
+    <p>Sayaç, anonim işlevin kapsamı tarafından korunur ve yalnızca add işlevi kullanılarak değiştirilebilir.</p>
+    <div id="rcorners3">
+        <p>Kapatma, üst işlev kapatıldıktan sonra bile üst kapsama erişime sahip bir işlevdir.</p>
+    </div>
+</div>
+</body>
+</html>

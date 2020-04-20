@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Fonksiyon Çağrısı</title>
+    <link rel="stylesheet" href="js.css">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <h2>    JavaScript</h2>
+        <li><a href="giris.html">JavaScript Giriş</a></li>
+        <li><a href="syntax.html">Yazılım(Syntax) Yapısı</a></li>
+        <li><a href="degisken.html">Değişkenler</a></li>
+        <li><a href="operator.html">Operatörler</a></li>
+        <li><a href="aritmetik.html">Aritmetik</a></li>
+        <li><a href="veritipleri.html">Veri Tipleri</a></li>
+        <li><a href="fonksiyon.html">Fonksiyon Yapısı</a></li>
+        <li><a href="olay.html">Olaylar(Events)</a></li>
+        <li><a href="stringsayi.html">Stringler, Sayılar</a></li>
+        <li><a href="dizi.html">Diziler ve Dizi İşlemleri</a></li>
+        <li><a href="kosul.html">If Koşul Yapıları</a></li>
+        <li><a href="dongu.html">Döngüler</a></li>
+        <li><a href="donusum.html">Tip Dönüşümleri</a></li>
+        <li><a href="mimari.html">Çalışma Yapısı ve Genel Mimarisi</a></li>
+        <h2>JS Fonksiyonlar</h2>
+        <li><a href="fonksiyontanimlari.html">Fonksiyon Tanımları</a></li>
+        <li><a href="fonksiyonparametreleri.html">Fonksiyon Parametreleri</a></li>
+        <li><a href="fonksiyoncagirma.html">Fonksiyon Çağırma</a></li>
+        <li><a href="callfonksiyonu.html">Call Fonksiyonu</a></li>
+        <li><a href="applyfonksiyonu.html">Apply Fonksiyonu</a></li>
+        <li><a href="jskapanislari.html">JS Kapanışları</a></li>
+        <h2>JS Nesneler</h2>
+        <li><a href="nesnetanimlama.html">Nesne Tanımlama</a></li>
+        <li><a href="nesneozellikleri.html">Nesne Özellikleri</a></li>
+        <li><a href="nesnemetotlari.html">Nesne Metotları</a></li>
+        <li><a href="goruntulemenesneleri.html">Görüntüleme Nesneleri</a></li>
+        <li><a href="nesneerisimcileri.html">Nesne Erişimcileri</a></li>
+        <li><a href="nesneolusturuculari.html">Nesne Oluşturucuları</a></li>
+        <li><a href="nesneprototipleri.html">Nesne Prototipleri</a></li>
+        <li><a href="es5nesneyontemleri.html">ES5 Nesne Yöntemleri</a></li>
+        <h2>JS HTML DOM</h2>
+        <li><a href="domintro.html">DOM Giriş</a></li>
+        <li><a href="dommetotlari.html">DOM Metotları</a></li>
+        <li><a href="dombelgesi.html">DOM Belgesi</a></li>
+        <li><a href="domogeleri.html">DOM Ögeleri</a></li>
+        <h2>Hafta 2 Uygulamalar</h2>
+        <li><a href="kullaniciformu.html">Kullanıcı Formu</a></li>
+    </ul>
+</div>
+<div class="example">
+    <h1>JavaScript Fonksiyon Çağrısı</h1>
+    <h2>Yöntem Yeniden</h2>
+    <p>Call () yöntemiyle, farklı nesnelerde kullanılabilecek bir yöntem yazabilirsiniz.</p>
+    <h2>Tüm Fonksiyonlar Yöntemdir</h2>
+    <p>JavaScript'te tüm işlevler nesne yöntemleridir.</p>
+    <p>Bir işlev bir JavaScript nesnesinin yöntemi değilse, genel nesnenin bir işlevidir (bkz. Önceki bölüm).</p>
+    <p>Aşağıdaki örnek, firstName, lastName, fullName olmak üzere 3 özelliğe sahip bir nesne oluşturur.</p>
+    <div id="rcorners2">
+        <p>var person = {</p>
+        <p>firstName: "John",</p>
+        <p>lastName: "Doe",</p>
+        <p>fullName: function () {</p>
+        <p>return this.firstName + "" + this.lastName;</p>
+        <p>}</p>
+        <p>}</p>
+        <p>person.fullName (); // "John Doe" geri dönecek</p>
+    </div>
+    <h2>This Anahtar Kelimesi</h2>
+    <p>İşlev tanımında, this işlevin "sahibini" ifade eder.</p>
+    <p>Yukarıdaki örnekte, bu, fullName işlevine "sahip" olan kişi nesnesidir.</p>
+    <p>Başka bir deyişle, this.firstName bu nesnenin firstName özelliği anlamına gelir.</p>
+    <p>Bu anahtar kelime hakkında daha fazla bilgiyi JS bu Anahtar Kelimede bulabilirsiniz.</p>
+    <h2>JavaScript call () Yöntemi</h2>
+    <p>Call () yöntemi, önceden tanımlanmış bir JavaScript yöntemidir.</p>
+    <p>Bir bağımsız değişken (parametre) olarak sahip nesnesine sahip bir yöntemi çağırmak (çağırmak) için kullanılabilir.</p>
+    <p>Call () ile, bir nesne başka bir nesneye ait bir yöntemi kullanabilir.</p>
+    <p>Bu örnek, person1 üzerinde kullanarak kişinin fullName yöntemini çağırır:</p>
+    <div id="rcorners2">
+        <p>var person = {</p>
+        <p>fullName: function () {</p>
+        <p>return this.firstName + "" + this.lastName;</p>
+        <p>}</p>
+        <p>}</p><br>
+        <p>var person1 = {</p>
+        <p>firstName: "John",</p>
+        <p>lastName: "Doe"</p>
+        <p>}</p><br>
+        <p>var person2 = {</p>
+        <p>firstName: "Mary",</p>
+        <p>lastName: "Doe"</p>
+        <p>}</p>
+        <p>person.fullName.call (person1); // "John Doe" geri dönecek</p>
+    </div>
+    <p>Bu örnek, person2 üzerinde kullanarak kişinin fullName yöntemini çağırır:</p>
+    <div id="rcorners2">
+        <p>var person = {</p>
+        <p>fullName: function () {</p>
+        <p>return this.firstName + "" + this.lastName;</p>
+        <p>}</p>
+        <p>}</p><br>
+        <p>var person1 = {</p>
+        <p>firstName: "John",</p>
+        <p>lastName: "Doe"</p>
+        <p>}</p><br>
+        <p>var person2 = {</p>
+        <p>firstName: "Mary",</p>
+        <p>lastName: "Doe"</p>
+        <p>}</p>
+        <p>person.fullName.call (PERSON2); // "Mary Doe" geri dönecek</p>
+    </div>
+    <h2>Bağımsız Değişkenlerle call () Yöntemi</h2>
+    <p>Call () yöntemi bağımsız değişkenleri kabul edebilir:</p>
+    <div id="rcorners2">
+        <p>var person = {</p>
+        <p>fullName: function (şehir, ülke) {</p>
+        <p>this.firstName + "" + this.lastName + "," + şehir + "," + ülke;</p>
+        <p>}</p>
+        <p>}</p>
+        <p>var person1 = {</p>
+        <p>firstName: "John",</p>
+        <p>lastName: "Doe"</p>
+        <p>}</p>
+        <p>person.fullName.call (person1, "Oslo", "Norveç");</p>
+    </div>
+</div>
+</body>
+</html>

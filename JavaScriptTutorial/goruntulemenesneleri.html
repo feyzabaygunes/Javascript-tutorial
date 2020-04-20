@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Görüntüleme Nesneleri</title>
+    <link rel="stylesheet" href="js.css">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <h2>    JavaScript</h2>
+        <li><a href="giris.html">JavaScript Giriş</a></li>
+        <li><a href="syntax.html">Yazılım(Syntax) Yapısı</a></li>
+        <li><a href="degisken.html">Değişkenler</a></li>
+        <li><a href="operator.html">Operatörler</a></li>
+        <li><a href="aritmetik.html">Aritmetik</a></li>
+        <li><a href="veritipleri.html">Veri Tipleri</a></li>
+        <li><a href="fonksiyon.html">Fonksiyon Yapısı</a></li>
+        <li><a href="olay.html">Olaylar(Events)</a></li>
+        <li><a href="stringsayi.html">Stringler, Sayılar</a></li>
+        <li><a href="dizi.html">Diziler ve Dizi İşlemleri</a></li>
+        <li><a href="kosul.html">If Koşul Yapıları</a></li>
+        <li><a href="dongu.html">Döngüler</a></li>
+        <li><a href="donusum.html">Tip Dönüşümleri</a></li>
+        <li><a href="mimari.html">Çalışma Yapısı ve Genel Mimarisi</a></li>
+        <h2>JS Fonksiyonlar</h2>
+        <li><a href="fonksiyontanimlari.html">Fonksiyon Tanımları</a></li>
+        <li><a href="fonksiyonparametreleri.html">Fonksiyon Parametreleri</a></li>
+        <li><a href="fonksiyoncagirma.html">Fonksiyon Çağırma</a></li>
+        <li><a href="callfonksiyonu.html">Call Fonksiyonu</a></li>
+        <li><a href="applyfonksiyonu.html">Apply Fonksiyonu</a></li>
+        <li><a href="jskapanislari.html">JS Kapanışları</a></li>
+        <h2>JS Nesneler</h2>
+        <li><a href="nesnetanimlama.html">Nesne Tanımlama</a></li>
+        <li><a href="nesneozellikleri.html">Nesne Özellikleri</a></li>
+        <li><a href="nesnemetotlari.html">Nesne Metotları</a></li>
+        <li><a href="goruntulemenesneleri.html">Görüntüleme Nesneleri</a></li>
+        <li><a href="nesneerisimcileri.html">Nesne Erişimcileri</a></li>
+        <li><a href="nesneolusturuculari.html">Nesne Oluşturucuları</a></li>
+        <li><a href="nesneprototipleri.html">Nesne Prototipleri</a></li>
+        <li><a href="es5nesneyontemleri.html">ES5 Nesne Yöntemleri</a></li>
+        <h2>JS HTML DOM</h2>
+        <li><a href="domintro.html">DOM Giriş</a></li>
+        <li><a href="dommetotlari.html">DOM Metotları</a></li>
+        <li><a href="dombelgesi.html">DOM Belgesi</a></li>
+        <li><a href="domogeleri.html">DOM Ögeleri</a></li>
+        <h2>Hafta 2 Uygulamalar</h2>
+        <li><a href="kullaniciformu.html">Kullanıcı Formu</a></li>
+    </ul>
+</div>
+<div class="example">
+    <h1>Görüntüleme Nesneleri</h1>
+    <h2>JavaScript Nesneleri Nasıl Görüntülenir?</h2>
+    <p>Bir JavaScript nesnesinin görüntülenmesi [object Object] çıktısını verecektir.</p>
+    <div id="rcorners2">
+        <p>var kisi = {isim: "John", yas: 30, sehir: "New York"};</p>
+        <p>document.getElementById ("demo"). innerHTML = kisi;</p>
+    </div>
+    <p>JavaScript nesnelerini görüntülemek için bazı yaygın çözümler şunlardır:</p>
+    <p><li>Nesne özelliklerini ada göre görüntüleme</li></p>
+    <p><li>Bir döngüde nesne özelliklerini görüntüleme</li></p>
+    <p><li>Object.values() kullanarak object'i görüntüleme</li></p>
+    <p><li>Nesneyi JSON.stringify () kullanarak görüntüleme</li></p>
+    <h2>Nesne Özelliklerini Görüntüleme</h2>
+    <p>Bir nesnenin özellikleri dize olarak görüntülenebilir:</p>
+    <div id="rcorners2">
+        <p>var kisi = {ad: "John", yas: 30, sehir: "New York"};</p>
+        <p>document.getElementById ("demo"). innerHTML = person.ad + ",</p>
+        <p>"+ person.yas +", "+ person.sehir;</p>
+    </div>
+    <h2>Nesneyi Bir Döngüde Görüntüleme</h2>
+    <p>Bir nesnenin özellikleri bir döngü içinde toplanabilir:</p>
+    <div id="rcorners2">
+        <p>var x, txt = "";</p>
+        <p>var kisi = {ad: "John", yas: 30, sehir: "New York"};</p>
+        <p>for (x in kisi) {</p>
+        <p>txt + = kisi [x] + "";</p>
+        <p>};</p>
+        <p>document.getElementById ("demo"). innerHTML = txt;</p>
+    </div>
+    <div id="rcorners1">
+        <p>Döngüde kisi [x] kullanmalısınız.</p>
+        <p>person.x çalışmaz (çünkü x değişkendir).</p>
+    </div>
+    <h2>Object.values() kullanma</h2>
+    <p>Herhangi bir JavaScript nesnesi Object.values ​​() kullanılarak bir diziye dönüştürülebilir:</p>
+    <div id="rcorners2">
+        <p>var kisi = {ad: "John", yas: 30, sehir: "New York"};</p><br>
+        <p>var myArray = Object.values ​​(person);</p>
+    </div>
+    <p>myArray artık görüntülenmeye hazır bir JavaScript dizisidir:</p>
+    <div id="rcorners2">
+        <p>var kisi = {ad: "John", yas: 50, sehir: "New York"};</p><br>
+        <p>var myArray = Object.values ​​(kisi);</p>
+        <p>document.getElementById ("demo"). innerHTML = myArray;</p>
+    </div>
+    <p>Object.values ​​() 2016'dan beri tüm büyük tarayıcılarda desteklenmektedir.</p>
+    <h2>JSON.stringify () kullanma</h2>
+    <p>Herhangi bir JavaScript nesnesi, JSON.stringify () JavaScript işleviyle dizilebilir (bir dizeye dönüştürülebilir):</p>
+    <div id="rcorners2">
+        <p>var kisi = {ad: "John", yas: 30, sehir: "New York"};</p><br>
+        <p>var myString = JSON.stringify (kisi);</p>
+    </div>
+    <p>myString artık görüntülenmeye hazır bir JavaScript dizesidir:</p>
+    <div id="rcorners2">
+        <p>var kisi = {isim: "John", yas: 30, sehir: "New York"};</p><br>
+        <p>var myString = JSON.stringify (kisi);</p>
+        <p>document.getElementById ("demo"). innerHTML = myString;</p>
+    </div>
+    <div id="rcorners1">
+        <p>Sonuç JSON gösterimini izleyen bir dize olacaktır:</p><br>
+        <p>{"ad": "John", "yaş": 50, "şehir": "New York"}</p>
+    </div>
+    <p>JSON.stringify (), JavaScript'e dahildir ve tüm büyük tarayıcılarda desteklenir.</p>
+    <h2>Dizgi Tarihleri</h2>
+    <p>JSON.stringify tarihleri dizelere dönüştürür:</p>
+    <div id="rcorners2">
+        <p>var kisi = {ad: "John", bugün: new Date ()};</p><br>
+        <p>var myString = JSON.stringify (kisi);</p>
+        <p>document.getElementById ("demo"). innerHTML = myString;</p>
+    </div>
+    <h2>Stringify İşlevleri</h2>
+    <p>JSON.stringify işlevleri dize etmez:</p>
+    <div id="rcorners2">
+        <p>var kisi = {ad: "John", yas: function () {return 30;}};</p>
+        <p>var myString = JSON.stringify (kisi);</p>
+        <p>document.getElementById ("demo"). innerHTML = myString;</p>
+    </div>
+    <p>Dizeleri bağlamadan önce işlevleri dizelere dönüştürürseniz bu "sabit" olabilir.</p>
+    <div id="rcorners2">
+        <p>var kisi = {ad: "John", yas: function () {return 30;}};</p>
+        <p>person.yas = person.yas.toString ();</p><br>
+        <p>var myString = JSON.stringify (kisi);</p>
+        <p>document.getElementById ("demo"). innerHTML = myString;</p>
+    </div>
+    <h2>Stringify Dizileri</h2>
+    <p>JavaScript dizilerini dizgi yapmak da mümkündür:</p>
+    <div id="rcorners2">
+        <p>var arr = ["John", "Peter", "Sally", "Jane"];</p>
+        <p>var myString = JSON.stringify (arr);</p>
+        <p>document.getElementById ("demo"). innerHTML = myString;</p>
+    </div>
+    <div id="rcorners1">
+        <p>Sonuç JSON gösterimini izleyen bir dize olacaktır:</p>
+        <p>[ "John", "Peter", "Sally", "Jane"]</p>
+    </div>
+</div>
+</body>
+</html>

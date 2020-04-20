@@ -1,0 +1,81 @@
+h1 , body, label, input, button {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-style: normal; font-variant: normal;
+    font-weight: 600; line-height: 25px;
+    color: #2a2a2a;
+    font-size: 16px;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.36);
+}
+.form {
+    background: rgba(255, 255, 255, 0.99);
+    border-radius: 10px;
+    border-color: rgba(160, 160, 160, 0.83);
+    margin: auto;
+}
+label {
+    position: absolute;
+    transform: translateY(14px);
+    left: 2px;
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 1em;
+}
+input {
+    font-size: 1em;
+    display: block;
+    width: 100%;
+    padding: initial;
+    background: none;
+    background-image: none;
+    border: 1px solid rgba(0, 0, 0, 0.19);
+    color: #000000;
+    border-radius: 0;
+}
+.button {
+    border: 1em;
+    outline: none;
+    padding: 1.1em;
+    font-size: 1em;
+    font-weight: 600;
+    background: rgba(153, 153, 153, 0.38);
+    color: rgba(27, 27, 27, 0.67);
+    cursor: pointer;
+    margin-top:2.2em;
+	border-radius: 5px;
+    display: block;
+    width: 100%;
+}
+td {
+    padding: 1px 70px 10px 30px;
+    border: none;
+}
+#buton {
+    background-color: rgba(0, 0, 0, 0.23);
+    border-radius: 10px;
+    margin: 3px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+}
+
+input[type="radio" i] {
+    background-color: initial;
+    cursor: default;
+    -webkit-appearance: radio;
+    box-sizing: border-box;
+    margin: 0px 0px 0px -90px;
+    padding: initial;
+    border: initial;
+}
+#radio {
+    width: auto;
+}
+span{
+    color:red;
+}
+
+span.dogru{
+    color:blue;
+}

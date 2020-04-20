@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS ES5 Nesne Yöntemleri</title>
+    <link rel="stylesheet" href="js.css">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <h2>    JavaScript</h2>
+        <li><a href="giris.html">JavaScript Giriş</a></li>
+        <li><a href="syntax.html">Yazılım(Syntax) Yapısı</a></li>
+        <li><a href="degisken.html">Değişkenler</a></li>
+        <li><a href="operator.html">Operatörler</a></li>
+        <li><a href="aritmetik.html">Aritmetik</a></li>
+        <li><a href="veritipleri.html">Veri Tipleri</a></li>
+        <li><a href="fonksiyon.html">Fonksiyon Yapısı</a></li>
+        <li><a href="olay.html">Olaylar(Events)</a></li>
+        <li><a href="stringsayi.html">Stringler, Sayılar</a></li>
+        <li><a href="dizi.html">Diziler ve Dizi İşlemleri</a></li>
+        <li><a href="kosul.html">If Koşul Yapıları</a></li>
+        <li><a href="dongu.html">Döngüler</a></li>
+        <li><a href="donusum.html">Tip Dönüşümleri</a></li>
+        <li><a href="mimari.html">Çalışma Yapısı ve Genel Mimarisi</a></li>
+        <h2>JS Fonksiyonlar</h2>
+        <li><a href="fonksiyontanimlari.html">Fonksiyon Tanımları</a></li>
+        <li><a href="fonksiyonparametreleri.html">Fonksiyon Parametreleri</a></li>
+        <li><a href="fonksiyoncagirma.html">Fonksiyon Çağırma</a></li>
+        <li><a href="callfonksiyonu.html">Call Fonksiyonu</a></li>
+        <li><a href="applyfonksiyonu.html">Apply Fonksiyonu</a></li>
+        <li><a href="jskapanislari.html">JS Kapanışları</a></li>
+        <h2>JS Nesneler</h2>
+        <li><a href="nesnetanimlama.html">Nesne Tanımlama</a></li>
+        <li><a href="nesneozellikleri.html">Nesne Özellikleri</a></li>
+        <li><a href="nesnemetotlari.html">Nesne Metotları</a></li>
+        <li><a href="goruntulemenesneleri.html">Görüntüleme Nesneleri</a></li>
+        <li><a href="nesneerisimcileri.html">Nesne Erişimcileri</a></li>
+        <li><a href="nesneolusturuculari.html">Nesne Oluşturucuları</a></li>
+        <li><a href="nesneprototipleri.html">Nesne Prototipleri</a></li>
+        <li><a href="es5nesneyontemleri.html">ES5 Nesne Yöntemleri</a></li>
+        <h2>JS HTML DOM</h2>
+        <li><a href="domintro.html">DOM Giriş</a></li>
+        <li><a href="dommetotlari.html">DOM Metotları</a></li>
+        <li><a href="dombelgesi.html">DOM Belgesi</a></li>
+        <li><a href="domogeleri.html">DOM Ögeleri</a></li>
+        <h2>Hafta 2 Uygulamalar</h2>
+        <li><a href="kullaniciformu.html">Kullanıcı Formu</a></li>
+    </ul>
+</div>
+<div class="example">
+    <h1>JavaScript ES5 Nesne Yöntemleri</h1>
+    <p>ECMAScript 5, JavaScript'e birçok yeni Nesne Yöntemi ekledi.</p>
+    <div id="rcorners2">
+        <h2>ES5 Yeni Nesne Yöntemleri</h2>
+        <p>// Bir nesne özelliği ekleme veya değiştirme</p>
+        <p>Object.defineProperty(object, property, descriptor)</p><br>
+        <p>// Birçok nesne özelliği ekleme veya değiştirme</p>
+        <p>Object.defineProperties(object, descriptors)</p><br>
+        <p>// Özelliklere Erişim</p>
+        <p>Object.getOwnPropertyDescriptor(object, property)</p><br>
+        <p>// Tüm özellikleri dizi olarak döndürür</p>
+        <p>Object.getOwnPropertyNames(object)</p><br>
+        <p>// Sayılabilir özellikleri bir dizi olarak döndürür</p>
+        <p>Object.keys(object)</p><br>
+        <p>// Prototipe erişim</p>
+        <p>Object.getPrototypeOf(object)</p><br>
+        <p>// Bir nesneye özellik eklenmesini önler</p>
+        <p>Object.preventExtensions(object)</p>
+        <p>// Nesneye özellikler eklenebilirse true değerini döndürür</p>
+        <p>Object.isExtensible(object)</p><br>
+        <p>// Nesne özelliklerinde değişiklik yapılmasını önler (değerlerde değil)</p>
+        <p>Object.seal(object)</p>
+        <p>// Nesne mühürlenirse true değerini döndürür</p>
+        <p>Object.isSealed(object)</p><br>
+        <p>// Nesnedeki değişiklikleri önler</p>
+        <p>Object.freeze(object)</p>
+        <p>// Nesne dondurulmuşsa true değerini döndürür</p>
+        <p>Object.isFrozen(object)</p><br>
+    </div>
+    <h2>Özellik Değerini Değiştirme</h2>
+    <div id="rcorners2">
+        <h3>Sözdizimi</h3>
+        <p>Object.defineProperty (nesne, özellik, {value: value})</p>
+    </div>
+    <p>Bu örnek bir özellik değerini değiştirir:</p>
+    <div id="rcorners2">
+        <p>var person = {</p>
+        <p>firstName: "John",</p>
+        <p>lastName : "Doe",</p>
+        <p>language : "EN"</p>
+        <p>};</p><br>
+        <p>// Bir özelliği değiştirme</p>
+        <p>Object.defineProperty(person, "language", {value : "NO"});</p>
+    </div>
+    <h2>Meta Verileri Değiştirme</h2>
+    <p>ES5, aşağıdaki özellik meta verilerinin değiştirilmesine izin verir:</p>
+    <div id="rcorners2">
+        <p>writable: true // Özellik değeri değiştirilebilir</p>
+        <p>numaralandırılabilir: true // Özellik numaralandırılabilir</p>
+        <p>configurable: true // Özellik yeniden yapılandırılabilir</p>
+    </div>
+    <div id="rcorners2">
+        <p>writable: false // Özellik değeri değiştirilemez</p>
+        <p>numaralandırılabilir: false // Özellik numaralandırılamaz</p>
+        <p>configurable: false // Özellik yeniden yapılandırılamaz</p>
+    </div>
+    <p>ES5 alıcıların ve ayarlayıcıların değiştirilmesine izin verir:</p>
+    <div id="rcorners2">
+        <p>// Alıcıyı tanımlama</p>
+        <p>get: function() { return language }</p>
+        <p>// Bir ayarlayıcı tanımlama</p>
+        <p>set: function(value) { language = value }</p>
+    </div>
+    <p>Bu örnek, dili salt okunur yapar:</p>
+    <div id="rcorners2">
+        <p>Object.defineProperty(person, "language", </p>
+        <p>{writable:false});</p>
+    </div>
+    <p>Bu örnek dili sayılmaz kılar:</p>
+    <div id="rcorners2">
+        <p>Object.defineProperty(person, "language", </p>
+        <p>{enumerable:false});</p>
+    </div>
+    <h2>Tüm Özellikleri Listeleme</h2>
+    <p>Bu örnek, bir nesnenin tüm özelliklerini listeler:</p>
+    <div id="rcorners2">
+        <p>var person = {</p>
+        <p>firstName: "John",</p>
+        <p>lastName : "Doe"</p>
+        <p>language : "EN"</p>
+        <p>};</p><br>
+        <p>Object.defineProperty(person, "language", {enumerable:false});</p>
+        <p>Object.getOwnPropertyNames(person);  // Returns an array of properties</p>
+    </div>
+    <h2>Numaralandırılabilir Özellikleri Listeleme</h2>
+    <p>Bu örnek, yalnızca bir nesnenin numaralandırılabilir özelliklerini listeler:</p>
+    <div id="rcorners2">
+        <p>var person = {</p>
+        <p>firstName: "John",</p>
+        <p>lastName : "Doe"</p>
+        <p>language : "EN"</p>
+        <p>};</p><br>
+        <p>Object.defineProperty(person, "language", {enumerable:false});</p>
+        <p>Object.keys(person);   // Bir dizi numaralandırılabilir özellik döndürür</p>
+    </div>
+    <h2>Mülk Ekleme</h2>
+    <p>Bu örnek, bir nesneye yeni bir özellik ekler:</p>
+    <div id="rcorners2">
+        <p>// Nesne oluşturma:</p>
+        <p>var person = {</p>
+        <p>firstName: "John",</p>
+        <p>lastName : "Doe",</p>
+        <p>language : "EN"</p>
+        <p>};</p><br>
+        <p>// Özellik ekle</p>
+        <p>Object.defineProperty(person, "year", {value:"2008"});</p>
+    </div>
+    <h2>Getter ve Setter Ekleme</h2>
+    <p>Object.defineProperty () yöntemi, Getters ve Setters eklemek için de kullanılabilir:</p>
+    <div id="rcorners2">
+        <p>// Nesne oluşturma</p>
+        <p>var person = {firstName:"John", lastName:"Doe"};</p><br>
+        <p>// Alıcıyı tanımla</p>
+        <p>Object.defineProperty(obj, "reset", {</p>
+        <p>get : function () {this.counter = 0;}</p>
+        <p>});</p>
+        <p>Object.defineProperty(obj, "increment", {</p>
+        <p>get : function () {this.counter++;}</p>
+        <p>});</p>
+        <p>Object.defineProperty(obj, "decrement", {</p>
+        <p>get : function () {this.counter--;}</p>
+        <p>});</p>
+        <p>Object.defineProperty(obj, "add", {</p>
+        <p>set : function (value) {this.counter += value;}</p>
+        <p>});</p>
+        <p>Object.defineProperty(obj, "subtract", {</p>
+        <p>set : function (i) {this.counter -= i;}</p>
+        <p>});</p><br>
+        <p>// Sayaçla oynayın:</p>
+        <p>obj.reset;</p>
+        <p>obj.add = 5;</p>
+        <p>obj.subtract = 1;</p>
+        <p>obj.increment;</p>
+        <p>obj.decrement;</p>
+    </div>
+</div>
+</body>
+</html>

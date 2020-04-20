@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Nesne Kullanımı</title>
+    <link rel="stylesheet" href="js.css">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <h2>    JavaScript</h2>
+        <li><a href="giris.html">JavaScript Giriş</a></li>
+        <li><a href="syntax.html">Yazılım(Syntax) Yapısı</a></li>
+        <li><a href="degisken.html">Değişkenler</a></li>
+        <li><a href="operator.html">Operatörler</a></li>
+        <li><a href="aritmetik.html">Aritmetik</a></li>
+        <li><a href="veritipleri.html">Veri Tipleri</a></li>
+        <li><a href="fonksiyon.html">Fonksiyon Yapısı</a></li>
+        <li><a href="olay.html">Olaylar(Events)</a></li>
+        <li><a href="stringsayi.html">Stringler, Sayılar</a></li>
+        <li><a href="dizi.html">Diziler ve Dizi İşlemleri</a></li>
+        <li><a href="kosul.html">If Koşul Yapıları</a></li>
+        <li><a href="dongu.html">Döngüler</a></li>
+        <li><a href="donusum.html">Tip Dönüşümleri</a></li>
+        <li><a href="mimari.html">Çalışma Yapısı ve Genel Mimarisi</a></li>
+        <h2>JS Fonksiyonlar</h2>
+        <li><a href="fonksiyontanimlari.html">Fonksiyon Tanımları</a></li>
+        <li><a href="fonksiyonparametreleri.html">Fonksiyon Parametreleri</a></li>
+        <li><a href="fonksiyoncagirma.html">Fonksiyon Çağırma</a></li>
+        <li><a href="callfonksiyonu.html">Call Fonksiyonu</a></li>
+        <li><a href="applyfonksiyonu.html">Apply Fonksiyonu</a></li>
+        <li><a href="jskapanislari.html">JS Kapanışları</a></li>
+        <h2>JS Nesneler</h2>
+        <li><a href="nesnetanimlama.html">Nesne Tanımlama</a></li>
+        <li><a href="nesneozellikleri.html">Nesne Özellikleri</a></li>
+        <li><a href="nesnemetotlari.html">Nesne Metotları</a></li>
+        <li><a href="goruntulemenesneleri.html">Görüntüleme Nesneleri</a></li>
+        <li><a href="nesneerisimcileri.html">Nesne Erişimcileri</a></li>
+        <li><a href="nesneolusturuculari.html">Nesne Oluşturucuları</a></li>
+        <li><a href="nesneprototipleri.html">Nesne Prototipleri</a></li>
+        <li><a href="es5nesneyontemleri.html">ES5 Nesne Yöntemleri</a></li>
+        <h2>JS HTML DOM</h2>
+        <li><a href="domintro.html">DOM Giriş</a></li>
+        <li><a href="dommetotlari.html">DOM Metotları</a></li>
+        <li><a href="dombelgesi.html">DOM Belgesi</a></li>
+        <li><a href="domogeleri.html">DOM Ögeleri</a></li>
+        <h2>Hafta 2 Uygulamalar</h2>
+        <li><a href="kullaniciformu.html">Kullanıcı Formu</a></li>
+    </ul>
+</div>
+<div class="example">
+    <h1>JavaScript Nesneleri</h1>
+    <div id="rcorners3">
+        <p>JavaScript'te nesneler kraldır. Nesneleri anlarsanız, JavaScript'i anlarsınız.</p>
+    </div>
+    <p>JavaScript'te neredeyse "her şey" bir nesnedir.</p>
+    <p><li>Boolean'lar nesne olabilir. (yeni anahtar kelime ile tanımlanmışsa)</li></p>
+    <p><li>Sayılar nesne olabilir. (yeni anahtar kelime ile tanımlanmışsa)</li></p>
+    <p><li>Dizeler nesne olabilir. (yeni anahtar kelime ile tanımlanmışsa)</li></p>
+    <p><li>Tarihler her zaman nesnedir.</li></p>
+    <p><li>Matematik her zaman nesnedir.</li></p>
+    <p><li>Normal ifadeler her zaman nesnedir.</li></p>
+    <p><li>Diziler her zaman nesnedir.</li></p>
+    <p><li>İşlevler her zaman nesnedir.</li></p>
+    <p><li>Nesneler her zaman nesnedir.</li></p>
+    <p><li>Temel öğeler dışındaki tüm JavaScript değerleri nesnedir.</li></p>
+    <h2>JavaScript Temel Öğeleri</h2>
+    <p><b>İlkel değer</b>, özelliği veya yöntemi olmayan bir değerdir.</p>
+    <p><b>İlkel veri türü</b>, ilkel değere sahip verilerdir.</p>
+    <p>JavaScript 5 tür ilkel veri türü tanımlar:</p>
+    <p><li>sicim</li></p>
+    <p><li>numara</li></p>
+    <p><li>boole</liboole></p>
+    <p><li>boş</li></p>
+    <p><li>tanımsız</li></p>
+    <p>İlkel değerler değişmezdir (sabit kodlanmıştır ve bu nedenle değiştirilemezler).</p>
+    <div id="rcorners1">
+        <p>x = 3.14 ise, x değerini değiştirebilirsiniz. Ancak 3.14 değerini değiştiremezsiniz.</p>
+    </div>
+    <h2>Değer Türü Açıklama</h2>
+    <table>
+        <tr>
+            <th>Değer</th>
+            <th>Türü</th>
+            <th>Açıklama</th>
+        </tr>
+        <tr>
+            <td>"Merhaba"</td>
+            <td>String</td>
+            <td>"Merhaba" her zaman "Merhaba" dır</td>
+        </tr>
+        <tr>
+            <td>3.14</td>
+            <td>Sayı</td>
+            <td>3.14 her zaman 3.14'tür</td>
+        </tr>
+        <tr>
+            <td>true</td>
+            <td>boolean</td>
+            <td>true her zaman doğrudur</td>
+        </tr>
+        <tr>
+            <td>false</td>
+            <td>boolean</td>
+            <td>false her zaman yanlıştır</td>
+        </tr>
+        <tr>
+            <td> null</td>
+            <td>null (object)</td>
+            <td>null her zaman null</td>
+        </tr>
+        <tr>
+            <td>undefined</td>
+            <td>undefined</td>
+            <td>her zaman undefined</td>
+        </tr>
+    </table>
+    <h2>Nesneler Değişkenlerdir</h2>
+    <p>JavaScript değişkenleri tek değerler içerebilir:</p>
+    <div id="rcorners2">
+        <p>var kişi = "John Doe";</p>
+    </div>
+    <p>Nesneler de değişkenlerdir. Ancak nesneler birçok değer içerebilir.</p>
+    <p>Değerler isim olarak yazılır: değer çiftleri (iki nokta üst üste ile ayrılmış ad ve değer).</p>
+    <div id="rcorners2">
+        <p>var person = {firstName: "John", lastName: "Doe", yaş: 50, eyeColor: "blue"};</p>
+    </div>
+    <div id="rcorners3">
+        <p>JavaScript nesnesi, adlandırılmış değerlerin bir koleksiyonudur</p>
+    </div>
+
+    <h2>Nesne Özellikleri</h2>
+    <p>JavaScript nesnelerindeki adlandırılmış değerlere özellikler denir.</p>
+    <table>
+        <tr>
+            <th>Özellik</th>
+            <th>Değeri</th>
+        </tr>
+        <tr>
+            <td>ad</td>
+            <td>John</td>
+        </tr>
+        <tr>
+            <td>soyad</td>
+            <td>Doe</td>
+        </tr>
+        <tr>
+            <td>yas</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>gozRengi</td>
+            <td>mavi</td>
+        </tr>
+    </table>
+    <p>Ad değeri çifti olarak yazılan nesneler şuna benzer:</p>
+    <p><li>PHP'de ilişkilendirilebilir diziler</li></p>
+    <p><li>Python'da sözlükler</li></p>
+    <p><li>C'deki karma tablolar</li></p>
+    <p><li>Java'daki karma haritalar</li></p>
+    <p><li>Ruby ve Perl'de Hash'ler</li></p>
+    <h2>Nesne Yöntemleri</h2>
+    <p>Yöntemler nesneler üzerinde gerçekleştirilebilecek eylemlerdir.</p>
+    <p>Nesne özellikleri hem ilkel değerler, diğer nesneler hem de işlevler olabilir.</p>
+    <p>Nesne yöntemi, işlev tanımı içeren bir nesne özelliğidir.</p>
+    <table>
+        <tr>
+            <th>Özellik</th>
+            <th>Değeri</th>
+        </tr>
+        <tr>
+            <td>ad</td>
+            <td>John</td>
+        </tr>
+        <tr>
+            <td>soyad</td>
+            <td>Doe</td>
+        </tr>
+        <tr>
+            <td>yas</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>gozRengi</td>
+            <td>mavi</td>
+        </tr>
+        <tr>
+            <td>fullName()</td>
+            <td>function() {return this.ad + " " + this.soyad;}</td>
+        </tr>
+    </table>
+    <div id="rcorners3">
+        <p>JavaScript nesneleri, adlandırılmış değerler için özellikler ve yöntemler adı verilen kaplardır.</p>
+    </div>
+    <p>Sonraki bölümlerde yöntemler hakkında daha fazla bilgi edineceksiniz.</p>
+    <h2>JavaScript Nesnesi Oluşturma</h2>
+    <p>JavaScript ile kendi nesnelerinizi tanımlayabilir ve oluşturabilirsiniz.</p>
+    <p>Yeni nesneler oluşturmanın farklı yolları vardır:</p>
+    <p><li>Bir nesne hazır bilgisi kullanarak tek bir nesne tanımlayın ve oluşturun.</li></p>
+    <p><li>New anahtar sözcüğüyle tek bir nesne tanımlayın ve oluşturun.</li></p>
+    <p><li>Bir nesne yapıcı tanımlayın ve sonra da inşa edilen türde nesneler oluşturun.</li></p>
+    <div id="rcorners3">
+        <p>ECMAScript 5'te, bir nesne Object.create () işleviyle de oluşturulabilir.</p>
+    </div>
+    <h2>Nesne Değişmezi Kullanma</h2>
+    <p>JavaScript Nesnesi oluşturmanın en kolay yolu budur.</p>
+    <p>Bir nesne hazır bilgisi kullanarak, bir ifadede hem nesneyi tanımlar hem de yaratırsınız.</p>
+    <p>Nesne değişmez değeri küme parantezlerinin içindeki {} ad çiftleri (yaş: 50 gibi) listesidir.</p>
+    <p>Aşağıdaki örnek, dört özelliğe sahip yeni bir JavaScript nesnesi oluşturur:</p>
+    <div id="rcorners2">
+        <p>var person = {ad: "John", soyad: "Doe", yas: 50, gozRengi: "mavi"};</p>
+    </div>
+    <p></p>
+    <div id="rcorners2">
+        <p>var kişi = {</p>
+        <p>ad: "John",</p>
+        <p>soyad: "Doe",</p>
+        <p>yas: 50,</p>
+        <p>gozRengi: "mavi"</p>
+        <p>};</p>
+    </div>
+    <p>Boşluklar ve satır kesmeleri önemli değildir. Bir nesne tanımı birden fazla satıra yayılabilir:</p>
+    <h2>JavaScript new Anahtar Kelimesini Kullanma </h2>
+    <p>Aşağıdaki örnek ayrıca dört özelliğe sahip yeni bir JavaScript nesnesi oluşturur:</p>
+    <div id="rcorners2">
+        <p>var person = new Object ();</p>
+        <p>person.firstName = "John";</p>
+        <p>person.lastName = "Doe";</p>
+        <p>person.age = 50;</p>
+        <p>person.eyeColor = "mavi";</p>
+    </div>
+    <div id="rcorners3">
+        <p>Yukarıdaki iki örnek tamamen aynıdır. new Object () kullanmaya gerek yoktur.</p>
+        <p>Basitlik, okunabilirlik ve yürütme hızı için ilki kullanın (nesne değişmez yöntemi).</p>
+    </div>
+    <h2>JavaScript Nesneleri Değişebilir</h2>
+    <p>Nesneler değiştirilebilir: Değerle değil referansla adreslenir.</p>
+    <p>Kişi bir nesneyse, aşağıdaki ifade kişinin bir kopyasını oluşturmaz:</p>
+    <div id="rcorners2">
+        <p>var x = kisi; // Bu kişinin bir kopyasını oluşturmaz.</p>
+    </div>
+    <p>X nesnesi kişinin bir kopyası değildir. Bu kişi. Hem x hem de kişi aynı nesnedir.</p>
+    <p>X üzerinde yapılan herhangi bir değişiklik kişiyi de değiştirir, çünkü x ve kişi aynı nesnedir.</p>
+    <div id="rcorners2">
+        <p>var kisi = {ad: "John", soyad: "Doe", yas: 50, gozRengi: "mavi"}</p>
+        <p>var x = kisi;</p>
+        <p>x.yas = 10; // Bu hem x.age hem de person.age'yi değiştirir</p>
+    </div>
+</div>
+</body>
+</html>

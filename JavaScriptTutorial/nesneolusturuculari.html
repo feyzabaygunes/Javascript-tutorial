@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Nesne Oluşturucuları</title>
+    <link rel="stylesheet" href="js.css">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <h2>    JavaScript</h2>
+        <li><a href="giris.html">JavaScript Giriş</a></li>
+        <li><a href="syntax.html">Yazılım(Syntax) Yapısı</a></li>
+        <li><a href="degisken.html">Değişkenler</a></li>
+        <li><a href="operator.html">Operatörler</a></li>
+        <li><a href="aritmetik.html">Aritmetik</a></li>
+        <li><a href="veritipleri.html">Veri Tipleri</a></li>
+        <li><a href="fonksiyon.html">Fonksiyon Yapısı</a></li>
+        <li><a href="olay.html">Olaylar(Events)</a></li>
+        <li><a href="stringsayi.html">Stringler, Sayılar</a></li>
+        <li><a href="dizi.html">Diziler ve Dizi İşlemleri</a></li>
+        <li><a href="kosul.html">If Koşul Yapıları</a></li>
+        <li><a href="dongu.html">Döngüler</a></li>
+        <li><a href="donusum.html">Tip Dönüşümleri</a></li>
+        <li><a href="mimari.html">Çalışma Yapısı ve Genel Mimarisi</a></li>
+        <h2>JS Fonksiyonlar</h2>
+        <li><a href="fonksiyontanimlari.html">Fonksiyon Tanımları</a></li>
+        <li><a href="fonksiyonparametreleri.html">Fonksiyon Parametreleri</a></li>
+        <li><a href="fonksiyoncagirma.html">Fonksiyon Çağırma</a></li>
+        <li><a href="callfonksiyonu.html">Call Fonksiyonu</a></li>
+        <li><a href="applyfonksiyonu.html">Apply Fonksiyonu</a></li>
+        <li><a href="jskapanislari.html">JS Kapanışları</a></li>
+        <h2>JS Nesneler</h2>
+        <li><a href="nesnetanimlama.html">Nesne Tanımlama</a></li>
+        <li><a href="nesneozellikleri.html">Nesne Özellikleri</a></li>
+        <li><a href="nesnemetotlari.html">Nesne Metotları</a></li>
+        <li><a href="goruntulemenesneleri.html">Görüntüleme Nesneleri</a></li>
+        <li><a href="nesneerisimcileri.html">Nesne Erişimcileri</a></li>
+        <li><a href="nesneolusturuculari.html">Nesne Oluşturucuları</a></li>
+        <li><a href="nesneprototipleri.html">Nesne Prototipleri</a></li>
+        <li><a href="es5nesneyontemleri.html">ES5 Nesne Yöntemleri</a></li>
+        <h2>JS HTML DOM</h2>
+        <li><a href="domintro.html">DOM Giriş</a></li>
+        <li><a href="dommetotlari.html">DOM Metotları</a></li>
+        <li><a href="dombelgesi.html">DOM Belgesi</a></li>
+        <li><a href="domogeleri.html">DOM Ögeleri</a></li>
+        <h2>Hafta 2 Uygulamalar</h2>
+        <li><a href="kullaniciformu.html">Kullanıcı Formu</a></li>
+    </ul>
+</div>
+<div class="example">
+    <h1>JavaScript Nesne Oluşturucuları</h1>
+    <div id="rcorners2">
+        <p>function Kişi (ilk, son, yaş, göz) {</p>
+        <p>this.firstName = ilk;</p>
+        <p>this.lastName = son;</p>
+        <p>this.age = yaş;</p>
+        <p>this.eyeColor = göz;</p>
+        <p>}</p>
+    </div>
+    <p>Yapıcı işlevlerini büyük harfli ilk harfle adlandırmak iyi bir uygulama olarak kabul edilir.</p>
+    <h2>Nesne Türleri (Planlar) (Sınıflar)</h2>
+    <p>Önceki bölümlerden örnekler sınırlıdır.</p>
+    <p>Yalnızca tek nesneler oluştururlar.</p>
+    <p>Bazen aynı "tipte" birçok nesne oluşturmak için bir "taslak" lazım.</p>
+    <p>Bir "nesne türü" yaratmanın yolu, bir nesne yapıcı işlevi kullanmaktır.</p>
+    <p>Yukarıdaki örnekte, Person () işlevi bir nesne yapıcı işlevidir.</p>
+    <p>New anahtar kelimesiyle yapıcı işlevi çağrılarak aynı türdeki nesneler oluşturulur:</p>
+    <div id="rcorners2">
+        <p> var myFather = yeni Kişi ("John", "Doe", 50, "mavi");</p>
+        <p>var myMother = yeni Kişi ("Sally", "Ralli", 48, "yeşil");</p>
+    </div>
+    <h2>This Anahtar Kelimesi</h2>
+    <p>JavaScript'te buna denen şey, koda "sahip" olan nesnedir.</p>
+    <p>This in değeri, bir nesnede kullanıldığında, nesnenin kendisidir.</p>
+    <p> Bir yapıcı işlevinde bunun bir değeri yoktur. Yeni nesnenin yerine geçer.
+        Yeni bir nesne oluşturulduğunda bunun değeri yeni nesne olacaktır.</p>
+    <div id="rcorners3">
+        <p>This'in bir değişken olmadığını unutmayın. Bir anahtar kelime. Bunun değerini değiştiremezsiniz.</p>
+    </div>
+
+    <h2> Bir Nesneye Özellik Ekleme</h2>
+    <p>Mevcut bir nesneye yeni bir özellik eklemek kolaydır:</p>
+    <div id="rcorners2">
+        <p>myFather.nationality = "İngilizce";</p>
+    </div>
+    <p>Özellik myFather'a eklenecek. Anneme değil. (Başka hiçbir nesneye değil).</p>
+    <h2>Bir Nesneye Yöntem Ekleme</h2>
+    <p>Mevcut bir nesneye yeni bir yöntem eklemek kolaydır:</p>
+    <div id="rcorners2">
+        <p>myFather.name = function () {</p>
+        <p>return this.firstName + " " + this.lastName;</p>
+        <p> };</p>
+        <p></p>
+    </div>
+    <p>Yöntem myFather'a eklenecektir. Anneme değil. (Başka hiçbir nesneye değil).</p>
+    <h2>Yapıcıya Özellik Ekleme</h2>
+    <p>Varolan bir nesneye yeni bir özellik eklediğiniz gibi, nesne oluşturucuya yeni bir özellik ekleyemezsiniz:</p>
+    <div id="rcorners2">
+        <p>Person.nationality = "İngilizce";</p>
+    </div>
+    <p>Bir kurucuya yeni bir özellik eklemek için, kurucuyu yapıcı işlevine eklemeniz gerekir:</p>
+    <div id="rcorners2">
+        <p>function kisi (ilk, son, yaş, göz rengi) {</p>
+        <p>this.firstName = ilk;</p>
+        <p>this.lastName = son;</p>
+        <p>this.age = yaş;</p>
+        <p>this.eyeColor = göz rengi;</p>
+        <p>this.nationality = "İngilizce";</p>
+        <p>}</p>
+    </div>
+    <p>Bu şekilde nesne özellikleri varsayılan değerlere sahip olabilir.</p>
+    <h2>Bir Yapıcıya Yöntem Ekleme</h2>
+    <p>Yapıcı işleviniz ayrıca yöntemleri de tanımlayabilir:</p>
+    <div id="rcorners2">
+        <p>funciton kisi (ilk, son, yaş, göz rengi) {</p>
+        <p>this.firstName = ilk;</p>
+        <p>this.lastName = son;</p>
+        <p>this.age = yaş;</p>
+        <p>this.eyeColor = göz rengi;</p>
+        <p>this.name = function() {return this.firstName + " " + this.lastName;};</p>
+        <p>}</p>
+    </div>
+    <p>Varolan bir nesneye yeni bir yöntem eklediğiniz gibi, nesne oluşturucuya yeni bir yöntem ekleyemezsiniz.</p>
+    <p>Nesne yapıcısına yöntem ekleme, yapıcı işlevi içinde yapılmalıdır:</p>
+    <div id="rcorners2">
+        <p>function Person(firstName, lastName, age, eyeColor) {</p>
+        <p>this.firstName = firstName;</p>
+        <p>this.lastName = lastName;</p>
+        <p>this.age = yaş;</p>
+        <p>this.eyeColor = eyeColor;</p>
+        <p>this.changeName = function (name) {</p>
+        <p>this.lastName = name;</p>
+        <p>};</p>
+        <p>}</p>
+    </div>
+    <p>ChangeName () işlevi, adın değerini kişinin lastName özelliğine atar.</p>
+    <div id="rcorners2">
+        <p>Şimdi deneyebilirsiniz:</p><br>
+        <p>myMother.changeName ( "Doe");</p>
+    </div>
+    <p>JavaScript, bunu myMother ile "değiştirerek" hangi kişiden bahsettiğinizi bilir.</p>
+    <h2>Yerleşik JavaScript Oluşturucuları</h2>
+    <p>JavaScript yerel nesneler için yerleşik yapıcılara sahiptir:</p>
+    <div id="rcorners2">
+        <p>var x1 = new Object();    // A new Object object</p>
+        <p>var x2 = new String();    // A new String object</p>
+        <p>var x3 = new Number();    // A new Number object</p>
+        <p>var x4 = new Boolean();   // A new Boolean object</p>
+        <p>var x5 = new Array();     // A new Array object</p>
+        <p>var x6 = new RegExp();    // A new RegExp object</p>
+        <p>var x7 = new Function();  // A new Function object</p>
+        <p>var x8 = new Date();      // A new Date object</p>
+    </div>
+    <p>Math () nesnesi listede değil. Math küresel bir nesnedir.</p>
+    <p>new anahtar kelimesi Math'te kullanılamaz.</p>
+    <h2>Biliyor musun?</h2>
+    <p> Yukarıda görebileceğiniz gibi JavaScript'in ilkel veri türleri olan String,
+        Number ve Boolean nesne sürümleri vardır. Ancak karmaşık nesneler oluşturmak
+        için hiçbir neden yoktur. İlkel değerler çok daha hızlıdır.
+    </p>
+    <h3>AYRICA:</h3>
+    <p>new Object () yerine {} nesne değişmezlerini kullanın.</p>
+    <p>Yeni String () yerine "" dize değişmezlerini kullanın.</p>
+    <p>new Number () yerine 12345 sayı değişmezlerini kullanın.</p>
+    <p>new Boolean () yerine true / false boolean değişmezlerini kullanın.</p>
+    <p>new Array () yerine dizi değişmezlerini [] kullanın.</p>
+    <p>new RegExp () yerine kalıp değişmezlerini / () / kullanın.</p>
+    <p>new Function () yerine işlev ifadelerini () {} kullanın.</p>
+    <div id="rcorners2">
+        <p>var x1 = {};                // yeni nesne</p>
+        <p>var x2 = "";                // yeni ilkel dize</p>
+        <p>var x3 = 0;                 // yeni ilkel sayı</p>
+        <p>var x4 = yanlış;            // yeni ilkel boole</p>
+        <p>var x5 = [];                // yeni dizi nesnesi</p>
+        <p>var x6 = / () /             // yeni normal ifade nesnesi</p>
+        <p>var x7 = function () {};    // yeni işlev nesnesi</p>
+    </div>
+    <h2>String Nesneleri</h2>
+    <p>Normalde, dizeler ilkel olarak oluşturulur: var firstName = "John"</p>
+    <p>Ancak dizeler, yeni anahtar sözcük kullanılarak nesneler olarak da oluşturulabilir:
+        var firstName = new String ("John")
+    </p>
+    <p>Dizelerin neden JS Dizeleri bölümünde nesne olarak oluşturulmaması gerektiğini öğrenin.</p>
+    <h2>Number Nesnesi </h2>
+    <p> Normalde, sayılar ilkel olarak oluşturulur: var x = 123</p>
+    <p>Ancak sayılar, yeni anahtar sözcük kullanılarak nesneler olarak da oluşturulabilir: var x = new Number (123)</p>
+    <p>JS Numaraları bölümünde sayıların neden nesne olarak oluşturulmaması gerektiğini öğrenin.</p>
+    <h2>Boolean Nesneleri</h2>
+    <p>Normal olarak, booleans ilkel olarak oluşturulur: var x = false</p>
+    <p>Ancak booleans yeni anahtar kelime kullanılarak nesne olarak da oluşturulabilir: var x = new Boolean (false)</p>
+    <p>Booleanların neden JS Booleans bölümünde nesne olarak oluşturulmaması gerektiğini öğrenin.</p><br>
+</div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kullanıcı Formu</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="kullanicigiris.css">
+</head>
+<body>
+<div class="example">
+<form method="POST" action="">
+    <br><br>
+    <table class="form" border="3" align="center" cellpadding="3">
+        <tr>
+            <td colspan="2" align="center">
+                <h2>Kullanıcı Formu</h2><br>
+            </td>
+        </tr>
+        <tr>
+            <td>Adı</td>
+            <td><input id="ad" type="text" name="ad"></td>
+        </tr>
+
+        <tr>
+            <td>Soyadı</td>
+            <td><input id="soyad" type="text" name="soyad"></td>
+        </tr>
+
+        <tr>
+            <td>Kullanıcı Adı</td>
+            <td><input id="kadi" type="text" name="kullanici"></td>
+        </tr>
+        <tr>
+            <td>E-mail</td>
+            <td><input id="email" type="text" name="email"></td>
+        </tr>
+        <tr>
+            <td>Şifre</td>
+            <td><input id="sifre" type="password" name="sifre"></td>
+        </tr>
+        <tr>
+            <td>Şifre(Tekrar)</td>
+            <td><input id="tsifre" type="password" name="tsifre"></td>
+        </tr>
+        <tr>
+            <td>TC Kimlik Numarası</td>
+            <td><input id="tcno" type="text" name="tckimlikno" maxlength="11"/></td>;
+        </tr>
+        <tr>
+            <td>Doğum Tarihi</td>
+            <td><input type="date" name="dtarihi"></td>
+        </tr>
+        <tr>
+            <td>Cinsiyet</td>
+            <td>
+                <input type="radio" name="cinsiyet" value="bay">Bay
+                <input type="radio" name="cinsiyet" value="bayan">Bayan
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input id="buton" onclick="formkontrol();" type="submit" value="Kaydet">
+            </td>
+        </tr>
+    </table>
+    <br>
+</form>
+</div>
+<script type="text/javascript">
+    function formkontrol(){
+        adi= document.getElementById('ad').value;
+        soyadi= document.getElementById('soyad').value;
+        kadi= document.getElementById('kadi').value;
+        email= document.getElementById('email').value;
+        sifre= document.getElementById('sifre').value;
+        tsifre= document.getElementById('tsifre').value;
+        tcno= document.getElementById('tcno').value;
+        var cinsiyetler = document.getElementsByName("cinsiyet");
+        var atpos=email.indexOf("@");
+        var dotpos=email.lastIndexOf(".");
+        var hata= new Array();
+        var sembol = '*|,:<>[]{}`;()@&$#%!+-"/';
+        var sembolvar=false;
+        var rakam='0123456789';
+        var hatavar=false;
+
+        if(adi==""){
+            hata.push('');
+            alert('Lütfen adınızı girin!');
+        }
+        else if (adi.length<3){
+            hata.push(' ');
+            alert('Adınız 3 karakterden kısa olamaz!');
+        }
+
+        if(soyadi==""){
+            hata.push(' ');
+            alert('Lütfen soyadınızı girin!');
+        }
+        else if (soyadi.length<3){
+            hata.push(' ');
+            alert('Soyadınız 3 karakterden kısa olamaz!');
+        }
+
+        if(kadi=="") {
+            hata.push(' ');
+            alert('Lütfen kullanıcı adınızı girin!');
+        }
+        else if (kadi.length<6){
+            hata.push(' ');
+            alert('Kullanıcı adınız 6 karakterden kısa olamaz!');
+        }
+
+        if ( atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length )
+        {
+            hata.push(' ');
+            alert("Geçerli email adresi girin");
+            return false;
+        }
+        if (sifre==''){
+            hata.push('');
+            alert('Lütfen şifrenizi girin!');
+        } else {
+
+                if (sifre!=tsifre){
+                    hata.push(' ');
+                    alert('Şifreler aynı olmalıdır.');
+                }
+
+                else if (sifre.length<6){
+                    hata.push(' ');
+                    alert('Şifre 6 karekter veya daha büyük olmalıdır.');
+                }
+
+                else if (sifre.search(/[a-z]/) < 0){
+                    hata.push(" ");
+                    alert('Şifre en az bir küçük harf içermelidir.');
+                }
+
+                else if (sifre.search(/[A-Z]/) < 0){
+                    hata.push(" ");
+                    alert('Şifre en az bir büyük harf içermelidir.');
+                }
+
+                else if (sifre.search(/[0-9]/) < 0){
+                    hata.push(" ");
+                    alert('Şifre en az bir rakam içermelidir.');
+                }
+        }
+
+        if (tcno==''){
+            hata.push(' ');
+            alert('Lütfen Tc Kimlik numaranızı giriniz!');
+        }
+        for (const j = 0; j < 11; j++) {
+            if (rakam.indexOf(tcno.charAt(j))!=-1){
+                hatavar=true;
+            }
+        }
+        if(hatavar==true){
+            hata.push(' ');
+            alert('Tc kimlik numaranızı kontrol ediniz!')
+        }
+        for(var m=0; m < cinsiyetler.length; m++){
+            if(cinsiyetler[m].click) {
+            } else {
+                hata.push(' ');
+                alert('Lütfen cinsiyetinizi seçiniz!');
+            }
+        }
+        if (hata.length > 0) {
+            alert(hata.join("\n"));
+            return false;
+        }
+        else {
+            alert('Giriş Başarılı!');
+        }
+    }
+</script>
+</body>
+</html>

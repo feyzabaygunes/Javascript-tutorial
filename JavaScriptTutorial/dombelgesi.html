@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML JS DOM Belgesi</title>
+    <link rel="stylesheet" href="js.css">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <h2>    JavaScript</h2>
+        <li><a href="giris.html">JavaScript Giriş</a></li>
+        <li><a href="syntax.html">Yazılım(Syntax) Yapısı</a></li>
+        <li><a href="degisken.html">Değişkenler</a></li>
+        <li><a href="operator.html">Operatörler</a></li>
+        <li><a href="aritmetik.html">Aritmetik</a></li>
+        <li><a href="veritipleri.html">Veri Tipleri</a></li>
+        <li><a href="fonksiyon.html">Fonksiyon Yapısı</a></li>
+        <li><a href="olay.html">Olaylar(Events)</a></li>
+        <li><a href="stringsayi.html">Stringler, Sayılar</a></li>
+        <li><a href="dizi.html">Diziler ve Dizi İşlemleri</a></li>
+        <li><a href="kosul.html">If Koşul Yapıları</a></li>
+        <li><a href="dongu.html">Döngüler</a></li>
+        <li><a href="donusum.html">Tip Dönüşümleri</a></li>
+        <li><a href="mimari.html">Çalışma Yapısı ve Genel Mimarisi</a></li>
+        <h2>JS Fonksiyonlar</h2>
+        <li><a href="fonksiyontanimlari.html">Fonksiyon Tanımları</a></li>
+        <li><a href="fonksiyonparametreleri.html">Fonksiyon Parametreleri</a></li>
+        <li><a href="fonksiyoncagirma.html">Fonksiyon Çağırma</a></li>
+        <li><a href="callfonksiyonu.html">Call Fonksiyonu</a></li>
+        <li><a href="applyfonksiyonu.html">Apply Fonksiyonu</a></li>
+        <li><a href="jskapanislari.html">JS Kapanışları</a></li>
+        <h2>JS Nesneler</h2>
+        <li><a href="nesnetanimlama.html">Nesne Tanımlama</a></li>
+        <li><a href="nesneozellikleri.html">Nesne Özellikleri</a></li>
+        <li><a href="nesnemetotlari.html">Nesne Metotları</a></li>
+        <li><a href="goruntulemenesneleri.html">Görüntüleme Nesneleri</a></li>
+        <li><a href="nesneerisimcileri.html">Nesne Erişimcileri</a></li>
+        <li><a href="nesneolusturuculari.html">Nesne Oluşturucuları</a></li>
+        <li><a href="nesneprototipleri.html">Nesne Prototipleri</a></li>
+        <li><a href="es5nesneyontemleri.html">ES5 Nesne Yöntemleri</a></li>
+        <h2>JS HTML DOM</h2>
+        <li><a href="domintro.html">DOM Giriş</a></li>
+        <li><a href="dommetotlari.html">DOM Metotları</a></li>
+        <li><a href="dombelgesi.html">DOM Belgesi</a></li>
+        <li><a href="domogeleri.html">DOM Ögeleri</a></li>
+        <h2>Hafta 2 Uygulamalar</h2>
+        <li><a href="kullaniciformu.html">Kullanıcı Formu</a></li>
+    </ul>
+</div>
+<div class="example">
+     <h1> JavaScript HTML  DOM belgesi </h1>
+        <p>HTML DOM belge nesnesi, web sayfanızdaki diğer tüm nesnelerin sahibidir.</p>
+
+        <h2>HTML DOM Belge Nesnesi</h2>
+        <p>Belge nesnesi web sayfanızı temsil eder.</p>
+        <p>Bir HTML sayfasındaki herhangi bir öğeye erişmek istiyorsanız, her zaman belge nesnesine erişmeye başlarsınız.</p>
+        <p>Aşağıda, HTML'ye erişmek ve bunları değiştirmek için belge nesnesini nasıl kullanabileceğinize ilişkin bazı örnekler verilmiştir.</p>
+
+        <h2>HTML Öğelerini Bulma</h2>
+        <table>
+            <tr>
+                <th>Method</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>document.getElementById(id)</td>
+                <td>Find an element by element id</td>
+            </tr>
+            <tr>
+                <td>document.getElementsByTagName(name)</td>
+                <td>Find elements by tag name</td>
+            </tr>
+            <tr>
+                <td>document.getElementsByClassName(name)</td>
+                <td>Find elements by class name</td>
+            </tr>
+        </table><br>
+
+        <h2>HTML Öğelerini Değiştirme</h2>
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>element.innerHTML =  new html content</td>
+                <td>Change the inner HTML of an element</td>
+            </tr>
+            <tr>
+                <td>element.attribute = new value</td>
+                <td>Change the attribute value of an HTML element</td>
+            </tr>
+            <tr>
+                <td>element.style.property = new style</td>
+                <td>Change the style of an HTML element</td>
+            </tr>
+            <tr>
+                <td>Method</td>
+                <td>Description</td>
+            </tr>
+            <tr>
+                <td>element.setAttribute(attribute, value)</td>
+                <td>Change the attribute value of an HTML element</td>
+            </tr>
+        </table><br>
+
+        <h2>Eleman Ekleme ve Silme</h2>
+        <table>
+            <tr>
+                <th>Method</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>document.createElement(element)</td>
+                <td>Create an HTML element</td>
+            </tr>
+            <tr>
+                <td>document.removeChild(element)</td>
+                <td>Remove an HTML element</td>
+            </tr>
+            <tr>
+                <td>document.appendChild(element)</td>
+                <td>Add an HTML element</td>
+            </tr>
+            <tr>
+                <td>document.replaceChild(new, old)</td>
+                <td>Replace an HTML element</td>
+            </tr>
+            <tr>
+                <td>document.write(text)</td>
+                <td>Write into the HTML output stream</td>
+            </tr>
+        </table><br>
+
+        <h2>Olay İşleyicileri Ekleme</h2>
+        <table>
+            <tr>
+                <th>Method</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>document.getElementById(id).onclick = function(){code}</td>
+                <td>Adding event handler code to an onclick event</td>
+            </tr>
+        </table><br>
+        <h2>HTML Nesneleri Bulma</h2>
+        <p>İlk HTML DOM Düzey 1 (1998), 11 HTML nesnesi, nesne koleksiyonu ve özelliği tanımladı. Bunlar HTML5'te hala geçerlidir.</p>
+        <p>Daha sonra, HTML DOM Seviye 3'e daha fazla nesne, koleksiyon ve özellik eklendi.</p>
+        <br>
+</div>
+
+</body>
+</html>

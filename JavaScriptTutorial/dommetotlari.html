@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Metotları</title>
+    <link rel="stylesheet" href="js.css">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <h2>    JavaScript</h2>
+        <li><a href="giris.html">JavaScript Giriş</a></li>
+        <li><a href="syntax.html">Yazılım(Syntax) Yapısı</a></li>
+        <li><a href="degisken.html">Değişkenler</a></li>
+        <li><a href="operator.html">Operatörler</a></li>
+        <li><a href="aritmetik.html">Aritmetik</a></li>
+        <li><a href="veritipleri.html">Veri Tipleri</a></li>
+        <li><a href="fonksiyon.html">Fonksiyon Yapısı</a></li>
+        <li><a href="olay.html">Olaylar(Events)</a></li>
+        <li><a href="stringsayi.html">Stringler, Sayılar</a></li>
+        <li><a href="dizi.html">Diziler ve Dizi İşlemleri</a></li>
+        <li><a href="kosul.html">If Koşul Yapıları</a></li>
+        <li><a href="dongu.html">Döngüler</a></li>
+        <li><a href="donusum.html">Tip Dönüşümleri</a></li>
+        <li><a href="mimari.html">Çalışma Yapısı ve Genel Mimarisi</a></li>
+        <h2>JS Fonksiyonlar</h2>
+        <li><a href="fonksiyontanimlari.html">Fonksiyon Tanımları</a></li>
+        <li><a href="fonksiyonparametreleri.html">Fonksiyon Parametreleri</a></li>
+        <li><a href="fonksiyoncagirma.html">Fonksiyon Çağırma</a></li>
+        <li><a href="callfonksiyonu.html">Call Fonksiyonu</a></li>
+        <li><a href="applyfonksiyonu.html">Apply Fonksiyonu</a></li>
+        <li><a href="jskapanislari.html">JS Kapanışları</a></li>
+        <h2>JS Nesneler</h2>
+        <li><a href="nesnetanimlama.html">Nesne Tanımlama</a></li>
+        <li><a href="nesneozellikleri.html">Nesne Özellikleri</a></li>
+        <li><a href="nesnemetotlari.html">Nesne Metotları</a></li>
+        <li><a href="goruntulemenesneleri.html">Görüntüleme Nesneleri</a></li>
+        <li><a href="nesneerisimcileri.html">Nesne Erişimcileri</a></li>
+        <li><a href="nesneolusturuculari.html">Nesne Oluşturucuları</a></li>
+        <li><a href="nesneprototipleri.html">Nesne Prototipleri</a></li>
+        <li><a href="es5nesneyontemleri.html">ES5 Nesne Yöntemleri</a></li>
+        <h2>JS HTML DOM</h2>
+        <li><a href="domintro.html">DOM Giriş</a></li>
+        <li><a href="dommetotlari.html">DOM Metotları</a></li>
+        <li><a href="dombelgesi.html">DOM Belgesi</a></li>
+        <li><a href="domogeleri.html">DOM Ögeleri</a></li>
+        <h2>Hafta 2 Uygulamalar</h2>
+        <li><a href="kullaniciformu.html">Kullanıcı Formu</a></li>
+    </ul>
+</div>
+<div class="example">
+     <h1> JavaScript - HTML DOM Yöntemleri </h1>
+        <p>HTML DOM yöntemleri, (HTML Elements'ta) gerçekleştirebileceğiniz eylemlerdir</p>
+        <p>HTML DOM özellikleri, ayarlayabileceğiniz veya değiştirebileceğiniz değerlerdir (HTML Öğelerinin).</p>
+        <h2>DOM Programlama Arayüzü</h2>
+
+
+        <p>HTML DOM'ye JavaScript (ve diğer programlama dilleri) ile erişilebilir.</p>
+        <p>DOM'de, tüm HTML öğeleri nesne olarak tanımlanır .</p>
+        <p>Programlama arayüzü, her nesnenin özellikleri ve yöntemleridir.</p>
+        <p>Bir özellik (bir HTML öğesinin içeriğini değiştirmek gibi) almak veya set ki bir değerdir.</p>
+        <p>Bir yöntem size (eklenti veya bir HTML elemanı silme gibi) yapabilirsiniz bir eylemdir.</p>
+        <div id="rcorners2">
+            <p>< html></p>
+            <p>< body></p><br>
+            <p>< p id="demo">< /p></p><br>
+            <p>< script></p>
+            <p>document.getElementById("demo").innerHTML = "Hello World!";</p>
+            <p>< /script></p><br>
+            <p>< /body></p>
+            <p>< /html></p>
+        </div>
+        <p>Yukarıdaki örnekte getElementById, bir yöntem iken innerHTML, bir özelliktir .</p>
+
+        <h2>GetElementById Yöntemi</h2>
+        <p>Bir HTML öğesine erişmenin en yaygın yolu id, öğenin.</p>
+        <p>Yukarıdaki örnekte , elemanı bulmak için getElementByIdkullanılan yöntem id="demo".</p>
+
+        <h2>İnnerHTML Özelliği</h2>
+        <p>Bir öğenin içeriğini almanın en kolay yolu innerHTML özelliği kullanmaktır .</p>
+        <p>innerHTML özelliği alma veya HTML öğelerinin içeriği değiştirilmesi için yararlıdır.</p>
+        <p>innerHTML özelliği almak veya dahil olmak üzere herhangi bir HTML elemanı, değiştirmek için < html > ve < body> etikleri içerisindekullanılabilir.</p>
+        <br>
+</div>
+</body>
+</html>

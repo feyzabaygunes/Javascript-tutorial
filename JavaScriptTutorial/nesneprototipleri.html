@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Nesne Prototipleri</title>
+    <link rel="stylesheet" href="js.css">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <h2>    JavaScript</h2>
+        <li><a href="giris.html">JavaScript Giriş</a></li>
+        <li><a href="syntax.html">Yazılım(Syntax) Yapısı</a></li>
+        <li><a href="degisken.html">Değişkenler</a></li>
+        <li><a href="operator.html">Operatörler</a></li>
+        <li><a href="aritmetik.html">Aritmetik</a></li>
+        <li><a href="veritipleri.html">Veri Tipleri</a></li>
+        <li><a href="fonksiyon.html">Fonksiyon Yapısı</a></li>
+        <li><a href="olay.html">Olaylar(Events)</a></li>
+        <li><a href="stringsayi.html">Stringler, Sayılar</a></li>
+        <li><a href="dizi.html">Diziler ve Dizi İşlemleri</a></li>
+        <li><a href="kosul.html">If Koşul Yapıları</a></li>
+        <li><a href="dongu.html">Döngüler</a></li>
+        <li><a href="donusum.html">Tip Dönüşümleri</a></li>
+        <li><a href="mimari.html">Çalışma Yapısı ve Genel Mimarisi</a></li>
+        <h2>JS Fonksiyonlar</h2>
+        <li><a href="fonksiyontanimlari.html">Fonksiyon Tanımları</a></li>
+        <li><a href="fonksiyonparametreleri.html">Fonksiyon Parametreleri</a></li>
+        <li><a href="fonksiyoncagirma.html">Fonksiyon Çağırma</a></li>
+        <li><a href="callfonksiyonu.html">Call Fonksiyonu</a></li>
+        <li><a href="applyfonksiyonu.html">Apply Fonksiyonu</a></li>
+        <li><a href="jskapanislari.html">JS Kapanışları</a></li>
+        <h2>JS Nesneler</h2>
+        <li><a href="nesnetanimlama.html">Nesne Tanımlama</a></li>
+        <li><a href="nesneozellikleri.html">Nesne Özellikleri</a></li>
+        <li><a href="nesnemetotlari.html">Nesne Metotları</a></li>
+        <li><a href="goruntulemenesneleri.html">Görüntüleme Nesneleri</a></li>
+        <li><a href="nesneerisimcileri.html">Nesne Erişimcileri</a></li>
+        <li><a href="nesneolusturuculari.html">Nesne Oluşturucuları</a></li>
+        <li><a href="nesneprototipleri.html">Nesne Prototipleri</a></li>
+        <li><a href="es5nesneyontemleri.html">ES5 Nesne Yöntemleri</a></li>
+        <h2>JS HTML DOM</h2>
+        <li><a href="domintro.html">DOM Giriş</a></li>
+        <li><a href="dommetotlari.html">DOM Metotları</a></li>
+        <li><a href="dombelgesi.html">DOM Belgesi</a></li>
+        <li><a href="domogeleri.html">DOM Ögeleri</a></li>
+        <h2>Hafta 2 Uygulamalar</h2>
+        <li><a href="kullaniciformu.html">Kullanıcı Formu</a></li>
+    </ul>
+</div>
+<div class="example">
+    <h1>JavaScript Nesne Prototipleri</h1>
+    <p>Tüm JavaScript nesneleri, özellikleri ve yöntemleri bir prototipten devralır.</p>
+    <p>Önceki bölümde, bir nesne oluşturucunun nasıl kullanılacağını öğrendik:</p>
+    <div id="rcorners2">
+        <p>function Person(first, last, age, eyecolor) {</p>
+        <p>this.firstName = first;</p>
+        <p>this.lastName = last;</p>
+        <p>this.age = age;</p>
+        <p>this.eyeColor = eyecolor;</p>
+        <p>}</p><br>
+        <p>var myFather = new Person("John", "Doe", 50, "blue");</p>
+        <p>var myMother = new Person("Sally", "Rally", 48, "green");"</p>
+    </div>
+    <p>Ayrıca, mevcut bir nesne yapıcısına yeni bir özellik ekleyemeyeceğinizi de öğrendik:</p>
+    <div id="rcorners2">
+        <p>Person.nationality = "English";</p>
+    </div>
+    <p>Bir kurucuya yeni bir özellik eklemek için, yapıcı işlevine eklemeniz gerekir:
+    </p>
+    <div id="rcorners2">
+        <p>function Person(first, last, age, eyecolor) {</p>
+        <p>this.firstName = first;</p>
+        <p>this.lastName = last;</p>
+        <p>this.age = age;</p>
+        <p>this.eyeColor = eyecolor;</p>
+        <p>this.nationality = "English";</p>
+        <p>}</p>
+    </div>
+    <h2>Prototip Kalıtım</h2>
+    <p>Tüm JavaScript nesneleri bir prototipin özelliklerini ve yöntemlerini devralır:</p>
+    <p><li>Date.prototype'den devralınan tarih nesneleri</li></p>
+    <p><li>Dizi nesneleri, Array.prototype'den miras alır</li></p>
+    <p><li>Kişi nesneleri Person.prototype miras</li></p>
+    <p>Object.prototype prototip miras zincirinin en üstünde:</p>
+    <p>Tarih nesneleri, Dizi nesneleri ve Kişi nesneleri Object.prototype'den miras alınır.</p>
+    <h2>Nesnelere Özellik ve Yöntem Ekleme</h2>
+    <p>Bazen belirli bir türdeki mevcut tüm nesnelere yeni özellikler (veya yöntemler) eklemek istersiniz.</p>
+    <p>Bazen bir nesne yapıcısına yeni özellikler (veya yöntemler) eklemek istersiniz.</p>
+    <h2>Prototip Özelliğini Kullanma</h2>
+    <p>JavaScript prototip özelliği, nesne oluşturuculara yeni özellikler eklemenize olanak tanır:</p>
+    <div id="rcorners2">
+        <p>function Person(first, last, age, eyecolor) {</p>
+        <p>this.firstName = first;</p>
+        <p>this.lastName = last;</p>
+        <p> this.age = age;</p>
+        <p> this.eyeColor = eyecolor;</p>
+        <p>}</p><br>
+        <p>Person.prototype.nationality = "English";</p>
+    </div>
+    <p>JavaScript prototip özelliği ayrıca nesne yapıcılarına yeni yöntemler eklemenize izin verir:</p>
+    <div id="rcorners2">
+        <p>function Person(first, last, age, eyecolor) {</p>
+        <p>this.firstName = first;</p>
+        <p>this.lastName = last;</p>
+        <p>this.age = age;</p>
+        <p>this.eyeColor = eyecolor;</p>
+        <p>}</p><br>
+        <p>Person.prototype.name = function() {</p>
+        <p>return this.firstName + " " + this.lastName;</p>
+        <p>};</p>
+    </div>
+    <p> Yalnızca kendi prototiplerinizi değiştirin. Standart JavaScript nesnelerinin prototiplerini asla değiştirmeyin.</p><br>
+</div>
+</body>
+</html>

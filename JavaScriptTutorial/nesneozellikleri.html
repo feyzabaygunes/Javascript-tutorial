@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Nesne Özellikleri</title>
+    <link rel="stylesheet" href="js.css">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <h2>    JavaScript</h2>
+        <li><a href="giris.html">JavaScript Giriş</a></li>
+        <li><a href="syntax.html">Yazılım(Syntax) Yapısı</a></li>
+        <li><a href="degisken.html">Değişkenler</a></li>
+        <li><a href="operator.html">Operatörler</a></li>
+        <li><a href="aritmetik.html">Aritmetik</a></li>
+        <li><a href="veritipleri.html">Veri Tipleri</a></li>
+        <li><a href="fonksiyon.html">Fonksiyon Yapısı</a></li>
+        <li><a href="olay.html">Olaylar(Events)</a></li>
+        <li><a href="stringsayi.html">Stringler, Sayılar</a></li>
+        <li><a href="dizi.html">Diziler ve Dizi İşlemleri</a></li>
+        <li><a href="kosul.html">If Koşul Yapıları</a></li>
+        <li><a href="dongu.html">Döngüler</a></li>
+        <li><a href="donusum.html">Tip Dönüşümleri</a></li>
+        <li><a href="mimari.html">Çalışma Yapısı ve Genel Mimarisi</a></li>
+        <h2>JS Fonksiyonlar</h2>
+        <li><a href="fonksiyontanimlari.html">Fonksiyon Tanımları</a></li>
+        <li><a href="fonksiyonparametreleri.html">Fonksiyon Parametreleri</a></li>
+        <li><a href="fonksiyoncagirma.html">Fonksiyon Çağırma</a></li>
+        <li><a href="callfonksiyonu.html">Call Fonksiyonu</a></li>
+        <li><a href="applyfonksiyonu.html">Apply Fonksiyonu</a></li>
+        <li><a href="jskapanislari.html">JS Kapanışları</a></li>
+        <h2>JS Nesneler</h2>
+        <li><a href="nesnetanimlama.html">Nesne Tanımlama</a></li>
+        <li><a href="nesneozellikleri.html">Nesne Özellikleri</a></li>
+        <li><a href="nesnemetotlari.html">Nesne Metotları</a></li>
+        <li><a href="goruntulemenesneleri.html">Görüntüleme Nesneleri</a></li>
+        <li><a href="nesneerisimcileri.html">Nesne Erişimcileri</a></li>
+        <li><a href="nesneolusturuculari.html">Nesne Oluşturucuları</a></li>
+        <li><a href="nesneprototipleri.html">Nesne Prototipleri</a></li>
+        <li><a href="es5nesneyontemleri.html">ES5 Nesne Yöntemleri</a></li>
+        <h2>JS HTML DOM</h2>
+        <li><a href="domintro.html">DOM Giriş</a></li>
+        <li><a href="dommetotlari.html">DOM Metotları</a></li>
+        <li><a href="dombelgesi.html">DOM Belgesi</a></li>
+        <li><a href="domogeleri.html">DOM Ögeleri</a></li>
+        <h2>Hafta 2 Uygulamalar</h2>
+        <li><a href="kullaniciformu.html">Kullanıcı Formu</a></li>
+    </ul>
+</div>
+<div class="example">
+    <h1>JavaScript Nesne Özellikleri</h1>
+    <p>Özellikler, herhangi bir JavaScript nesnesinin en önemli parçasıdır.</p>
+    <h2>JavaScript Özellikleri</h2>
+    <p>Özellikler, bir JavaScript nesnesiyle ilişkili değerlerdir.</p>
+    <p>JavaScript nesnesi, sıralanmamış özelliklerin bir koleksiyonudur.</p>
+    <p>Özellikler genellikle değiştirilebilir, eklenebilir ve silinebilir, ancak bazıları salt okunurdur.</p>
+    <h2>JavaScript Özelliklerine Erişme</h2>
+    <p>Bir nesnenin özelliğine erişmek için sözdizimi:</p>
+    <div id="rcorners2">
+        <p>objectName.property // person.age</p>
+    </div>
+    <p>veya</p>
+    <div id="rcorners2">
+        <p>objectName ["özellik"] // kişi ["yaş"]</p>
+    </div>
+    <p>veya</p>
+    <div id="rcorners2">
+        <p>objectName [ifade] // x = "yaş"; kullanıcı [x]</p>
+    </div>
+    <p>İfade bir özellik adına göre değerlendirilmelidir.</p>
+    <h3>Örnek 1</h3>
+    <div id="rcorners2">
+        <p>person.firstname + "" + person.age + "yaşında." ;</p>
+    </div>
+    <h3>Örnek 2</h3>
+    <div id="rcorners2">
+        <p>kişi ["ad"] + "" + kişi ["yaş"] + "yaşında" dir;</p>
+    </div>
+    <h2>JavaScript for ... in döngüsü</h2>
+    <p>JavaScript for ... in deyimi bir nesnenin özellikleri arasında dolaşır.</p>
+    <h3>Sözdizimi</h3>
+    <div id="rcorners2">
+        <p>for (nesnedeki değişken) {</p>
+        <p>// yürütülecek kod</p>
+        <p>}</p>
+    </div>
+    <p>For ... in döngüsünün içindeki kod bloğu, her özellik için bir kez yürütülür.</p>
+    <p>Bir nesnenin özellikleri arasında döngü yapmak:</p>
+    <div id="rcorners2">
+        <p>var kisi = {ad: "John", soyad: "Doe", yas: 25};</p>
+        <p>for (x in kisi) {</p>
+        <p>txt + = kisi [x];</p>
+        <p>}</p>
+    </div>
+    <h2>Yeni Özellik Ekleme</h2>
+    <p>Mevcut bir nesneye basitçe bir değer vererek yeni özellikler ekleyebilirsiniz.</p>
+    <p>Kişi nesnesinin zaten var olduğunu varsayın - daha sonra ona yeni özellikler verebilirsiniz:</p>
+    <div id="rcorners2">
+        <p>kisi.nationality = "İngilizce";</p>
+    </div>
+    <h2>Özellikleri Silme</h2>
+    <p><b>Delete</b> anahtar sözcüğü bir nesneden bir özelliği siler:</p>
+    <div id="rcorners2">
+        <p>var kisi = {ad: "John", soyad: "Doe", yas: 50, gozRengi: "mavi"};</p>
+        <p>kisi.age dosyasını silin; // veya kişiyi sil ["age"];</p>
+    </div>
+    <p><b>Delete</b> anahtar sözcüğü hem mülkün değerini hem de mülkün kendisini siler.</p>
+    <p>Silindikten sonra, özellik tekrar geri eklenmeden önce kullanılamaz.</p>
+    <p>Silme işleci nesne özelliklerinde kullanılmak üzere tasarlanmıştır. Değişkenler veya fonksiyonlar üzerinde hiçbir etkisi yoktur.</p>
+    <p><b>Delete</b> operatörü önceden tanımlanmış JavaScript nesnesi özelliklerinde kullanılmamalıdır. Uygulamanızı kilitleyebilir.</p>
+    <h2>Özellik Nitelikleri</h2>
+    <p>Tüm özelliklerin bir adı vardır. Ayrıca bir de değerleri var.</p>
+    <p>Değer, mülkün özelliklerinden biridir.</p>
+    <p>Diğer özellikler şunlardır: numaralandırılabilir, yapılandırılabilir ve yazılabilir.</p>
+    <p>Bu öznitelikler özelliğe nasıl erişilebileceğini tanımlar (okunabilir mi? Yazılabilir mi?)</p>
+    <p>JavaScript'te tüm öznitelikler okunabilir, ancak yalnızca değer özniteliği değiştirilebilir (ve yalnızca özellik yazılabilirse).</p>
+    <p>(ECMAScript 5, tüm özellik niteliklerini almak ve ayarlamak için yöntemlere sahiptir)</p>
+    <h2>Prototip Özellikleri</h2>
+    <p>JavaScript nesneleri prototiplerinin özelliklerini devralır.</p>
+    <p><b>Delete</b> anahtar sözcüğü devralınan özellikleri silmez, ancak bir prototip özelliğini silerseniz,
+        prototipten devralınan tüm nesneleri etkiler.</p><br>
+</div>
+</body>
+</html>
